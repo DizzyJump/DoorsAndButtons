@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 480552121}
   - component: {fileID: 480552120}
   - component: {fileID: 480552122}
+  - component: {fileID: 480552123}
   m_Layer: 0
   m_Name: BlueButton
   m_TagString: Untagged
@@ -613,6 +614,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   Radius: 1
+--- !u!114 &480552123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480552117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +718,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &854248943
 GameObject:
@@ -823,7 +836,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -1159,6 +1172,7 @@ GameObject:
   - component: {fileID: 1234611849}
   - component: {fileID: 1234611848}
   - component: {fileID: 1234611850}
+  - component: {fileID: 1234611851}
   m_Layer: 0
   m_Name: BlueDoor
   m_TagString: Untagged
@@ -1246,6 +1260,18 @@ MonoBehaviour:
   OpenPosition: {x: -21.61, y: 2, z: -3.31}
   MovingSpeed: 1
   ButtonToOpen: {fileID: 480552122}
+--- !u!114 &1234611851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234611845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1372936773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1304,7 @@ Transform:
   - {fileID: 2101538911}
   - {fileID: 854248944}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454222631
 GameObject:
@@ -1361,7 +1387,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4735c151d7354a94391eec9646572c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovementSpeed: 1
   Radius: 1
+  isListenInput: 1
+--- !u!114 &1486568881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486568877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673963545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1413,7 @@ GameObject:
   - component: {fileID: 1673963547}
   - component: {fileID: 1673963546}
   m_Layer: 0
-  m_Name: EntryPoint
+  m_Name: GAME ENTRY POINT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1404,7 +1444,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690435704
 GameObject:
@@ -1746,6 +1786,7 @@ GameObject:
   - component: {fileID: 1882077714}
   - component: {fileID: 1882077713}
   - component: {fileID: 1882077715}
+  - component: {fileID: 1882077716}
   m_Layer: 0
   m_Name: RedDoor
   m_TagString: Untagged
@@ -1833,6 +1874,18 @@ MonoBehaviour:
   OpenPosition: {x: -4.7, y: 2, z: 14.42}
   MovingSpeed: 1
   ButtonToOpen: {fileID: 2026812901}
+--- !u!114 &1882077716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882077710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1948294838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1842,11 +1895,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260597861999642, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_Name
-      value: PLayer
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4759721911903040, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4759721911903040, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2016,6 +2069,7 @@ GameObject:
   - component: {fileID: 2026812900}
   - component: {fileID: 2026812899}
   - component: {fileID: 2026812901}
+  - component: {fileID: 2026812902}
   m_Layer: 0
   m_Name: RedButton
   m_TagString: Untagged
@@ -2102,6 +2156,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   Radius: 1
+--- !u!114 &2026812902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026812896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101538910
 GameObject:
   m_ObjectHideFlags: 0

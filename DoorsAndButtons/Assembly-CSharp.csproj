@@ -132,6 +132,7 @@
     <Compile Include="Assets\GameLogicScripts\Interfaces\ISceneObjectView.cs" />
     <Compile Include="Assets\UnityRelatedScripts\SceneObjectView.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\SceneViewFeature\View.cs" />
+    <Compile Include="Assets\GameLogicScripts\Systems\SceneViewFeature\UpdateViewPositionSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

@@ -15,6 +15,8 @@ public class GameLogicEngine
         world = new EcsWorld();
         systems = new EcsSystems(world, sharedData);
 
+        systems
+            .Add(new UpdateViewPositionSystem());
 
         systems.Init();
 
@@ -57,7 +59,7 @@ public class GameLogicEngine
     {
         foreach(var actor in config.Actors)
         {
-            ActorsFactory.CreateActor(world, actor.Position, actor.Radius, actor.MovementSpeed, true, actor.View);
+            ActorsFactory.CreateActor(world, actor);
         }
     }
 }

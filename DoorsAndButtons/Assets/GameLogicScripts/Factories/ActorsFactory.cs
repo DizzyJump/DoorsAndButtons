@@ -5,6 +5,16 @@ using Leopotam.EcsLite;
 
 public class ActorsFactory
 {
+    public static int CreateActor(EcsWorld world, LevelConfig.Actor actorConfig)
+    {
+        return CreateActor(world, 
+            actorConfig.Position, 
+            actorConfig.Radius, 
+            actorConfig.MovementSpeed, 
+            actorConfig.ListenInput, 
+            actorConfig.View);
+    }
+
     public static int CreateActor(EcsWorld world, Vector3 position, float speed, float radius, bool inputListener, ISceneObjectView view)
     {
         var entity = world.NewEntity();
@@ -18,13 +28,13 @@ public class ActorsFactory
 
         actorsPool.Add(entity);
 
-        var positionComponent = positionPool.Add(entity);
+        ref var positionComponent = ref positionPool.Add(entity);
         positionComponent.Value = position;
 
-        var speedComponent = movementSpeedPool.Add(entity);
+        ref var speedComponent = ref movementSpeedPool.Add(entity);
         speedComponent.Value = speed;
 
-        var radiusComponent = radiusPool.Add(entity);
+        ref var radiusComponent = ref radiusPool.Add(entity);
         radiusComponent.Value = radius;
 
         if(inputListener)
@@ -32,7 +42,7 @@ public class ActorsFactory
 
         if(view!=null)
         {
-            var viewComponent = viewsPool.Add(entity);
+            ref var viewComponent = ref viewsPool.Add(entity);
             viewComponent.Value = view;
         }    
         return entity;

@@ -18,6 +18,8 @@ public class GameLogicEngine
         systems
             .Add(new UserInputRequestProcessingSystem())
             .Add(new UpdateMovingSystem())
+            .Add(new CheckButtonLeaveSystem())
+            .Add(new CheckButtonEnterSystem())
             .Add(new UpdateViewPositionSystem());
 
         systems.Init();

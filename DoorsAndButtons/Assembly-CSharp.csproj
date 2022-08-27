@@ -136,9 +136,11 @@
     <Compile Include="Assets\GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\Button.cs" />
-    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\ButtonEnabled.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\Activated.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\CanInteractWithButtons.cs" />
     <Compile Include="Assets\GameLogicScripts\Factories\ButtonsFactory.cs" />
+    <Compile Include="Assets\GameLogicScripts\Systems\ButtonFeature\CheckButtonEnterSystem.cs" />
+    <Compile Include="Assets\GameLogicScripts\Systems\ButtonFeature\CheckButtonLeaveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

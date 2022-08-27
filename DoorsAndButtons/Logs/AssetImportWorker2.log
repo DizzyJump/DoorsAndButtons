@@ -580,3 +580,711 @@ Received Import Request.
   path: Assets/GameLogicScripts/Factories/ButtonsFactory.cs
   artifactKey: Guid(0911e405e5aef5643a00fd0291da0258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/GameLogicScripts/Factories/ButtonsFactory.cs using Guid(0911e405e5aef5643a00fd0291da0258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eefe67abd418df36ff456a256028f8fb') in 0.004346 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026547 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.729 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2730ms)
+		BeginReloadAssembly (295ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (2310ms)
+			LoadAssemblies (213ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (266ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (1861ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (1715ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3489 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.4 KB). Loaded Objects now: 3974.
+Memory consumption went from 120.1 MB to 120.0 MB.
+Total: 3.214300 ms (FindLiveObjects: 0.224700 ms CreateObjectMapping: 0.150700 ms MarkObjects: 2.756700 ms  DeleteObjects: 0.081400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1531.326192 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbfc16fa156fa2fa0d16c3f7f5ee044a') in 0.012298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.577314 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052f5095b2d3dfcd5adfcf330bf43161') in 0.004893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.828625 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ef0b2a7f4f986c3d3deceb62eb84bd6') in 0.003581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.330333 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dfcf604cb8db023b47dadd684d59f00') in 0.004287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.845077 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '822b173e6a67430180004453952e34ae') in 0.003458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.716096 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750d91292e4dacbdfb275977d16afb8e') in 0.003090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.243040 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5fa98937779fdd523a870102dbc3846') in 0.004390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.710806 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1362826b4806670604b4dc7e40c8a989') in 0.004516 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.027069 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2664ms)
+		BeginReloadAssembly (226ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (77ms)
+		EndReloadAssembly (2316ms)
+			LoadAssemblies (156ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (265ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (1861ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (1715ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.3 KB). Loaded Objects now: 3978.
+Memory consumption went from 120.1 MB to 120.1 MB.
+Total: 3.275000 ms (FindLiveObjects: 0.264300 ms CreateObjectMapping: 0.103800 ms MarkObjects: 2.818800 ms  DeleteObjects: 0.087200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 23.999204 seconds.
+  path: Assets/GameLogicScripts/Components/ButtonFeature/Activated.cs
+  artifactKey: Guid(2a0147c16dc9e6d45a0ec41f75fc45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ButtonFeature/Activated.cs using Guid(2a0147c16dc9e6d45a0ec41f75fc45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37b31468a7a379c66501bc295c46f069') in 0.012623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.809488 seconds.
+  path: Assets/GameLogicScripts/Components/ButtonFeature/Activated.cs
+  artifactKey: Guid(2a0147c16dc9e6d45a0ec41f75fc45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ButtonFeature/Activated.cs using Guid(2a0147c16dc9e6d45a0ec41f75fc45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1753e6c8b408ac96755186edfc79907') in 0.003562 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.046340 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.666 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2667ms)
+		BeginReloadAssembly (246ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (77ms)
+		EndReloadAssembly (2300ms)
+			LoadAssemblies (192ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (259ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (1840ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (1696ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.4 KB). Loaded Objects now: 3981.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 2.988100 ms (FindLiveObjects: 0.238100 ms CreateObjectMapping: 0.102400 ms MarkObjects: 2.570200 ms  DeleteObjects: 0.076600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026430 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.654 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2655ms)
+		BeginReloadAssembly (229ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (2303ms)
+			LoadAssemblies (157ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (260ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (1862ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (1720ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.6 KB). Loaded Objects now: 3984.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 3.235200 ms (FindLiveObjects: 0.228800 ms CreateObjectMapping: 0.086700 ms MarkObjects: 2.829700 ms  DeleteObjects: 0.089000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.025464 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.594 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2595ms)
+		BeginReloadAssembly (215ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (2263ms)
+			LoadAssemblies (147ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (1828ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (1686ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.4 KB). Loaded Objects now: 3987.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 3.056700 ms (FindLiveObjects: 0.268500 ms CreateObjectMapping: 0.110200 ms MarkObjects: 2.595700 ms  DeleteObjects: 0.081500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.025062 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.726 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2727ms)
+		BeginReloadAssembly (273ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (76ms)
+		EndReloadAssembly (2334ms)
+			LoadAssemblies (202ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (1890ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (1747ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.4 KB). Loaded Objects now: 3990.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 3.131100 ms (FindLiveObjects: 0.235800 ms CreateObjectMapping: 0.101100 ms MarkObjects: 2.708900 ms  DeleteObjects: 0.084200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026391 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.609 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2610ms)
+		BeginReloadAssembly (211ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (2281ms)
+			LoadAssemblies (147ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (1845ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (1697ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (18ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.3 KB). Loaded Objects now: 3993.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 3.175800 ms (FindLiveObjects: 0.293400 ms CreateObjectMapping: 0.116600 ms MarkObjects: 2.663700 ms  DeleteObjects: 0.100700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.025426 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.691 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2692ms)
+		BeginReloadAssembly (222ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (74ms)
+		EndReloadAssembly (2341ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (260ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (1896ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (1749ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.5 KB). Loaded Objects now: 3996.
+Memory consumption went from 120.2 MB to 120.1 MB.
+Total: 3.339300 ms (FindLiveObjects: 0.261900 ms CreateObjectMapping: 0.167400 ms MarkObjects: 2.818600 ms  DeleteObjects: 0.090400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 546.883925 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs
+  artifactKey: Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonEnterSystem.cs using Guid(938fb24c109c234409bf83bf721898ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff0cf58e5842aca3903334fa21ff86a2') in 0.009840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.589755 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc4f7da3c33e2f2ff4721b2388e6ebb') in 0.004756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.282194 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0a298ea3662970b1e648e464ef1bef') in 0.004370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 43.358635 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65c275d2c54d6488ecf6c27a93ec66c') in 0.005336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 90.327219 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f88be0f4225c195c5d4e928ec551538d') in 0.004435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.909914 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '793a2ac0b6768b5590fd56163c5b0da9') in 0.004130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.355263 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b472c9eb34e08c05a79c08baa050ad2') in 0.004437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.914197 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4703d1de264a1408037a738b31993c09') in 0.003088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.941798 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af70c9ee9e5097babefcd3d15cd0ef52') in 0.003498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.364698 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6512ae714cddef106617df699f84feef') in 0.003970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.972182 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9452c413b245ef06ab110829c02e6d9') in 0.003730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.882888 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '652b4881e17bb6cac2c5284a7872c22c') in 0.005035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.229922 seconds.
+  path: Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs
+  artifactKey: Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Systems/ButtonFeature/CheckButtonLeaveSystem.cs using Guid(d33f962f3bd0b02409d564e55cc23142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3358c8977656ab9c8c78579cc26d51f8') in 0.003911 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026183 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.765 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2765ms)
+		BeginReloadAssembly (257ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (75ms)
+		EndReloadAssembly (2385ms)
+			LoadAssemblies (216ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (261ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (1905ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (1758ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3491 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.4 KB). Loaded Objects now: 4000.
+Memory consumption went from 120.3 MB to 120.2 MB.
+Total: 3.162700 ms (FindLiveObjects: 0.251500 ms CreateObjectMapping: 0.102800 ms MarkObjects: 2.725900 ms  DeleteObjects: 0.081400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.025215 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.068 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3068ms)
+		BeginReloadAssembly (244ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (82ms)
+		EndReloadAssembly (2689ms)
+			LoadAssemblies (166ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (2181ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (28ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (2012ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3491 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.5 KB). Loaded Objects now: 4003.
+Memory consumption went from 120.3 MB to 120.2 MB.
+Total: 4.373400 ms (FindLiveObjects: 0.440900 ms CreateObjectMapping: 0.369800 ms MarkObjects: 3.459900 ms  DeleteObjects: 0.101400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

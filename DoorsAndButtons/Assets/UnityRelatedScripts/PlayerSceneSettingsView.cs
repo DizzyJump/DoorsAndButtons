@@ -8,8 +8,6 @@ public class PlayerSceneSettingsView : MonoBehaviour
 
     public float MovementSpeed;
 
-    public float Radius;
-
     public bool isListenInput;
 
     public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();

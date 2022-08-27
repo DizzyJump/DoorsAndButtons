@@ -23,7 +23,6 @@ public class LevelConfig
     public class Actor
     {
         public Vector3 Position;
-        public float Radius;
         public float MovementSpeed;
         public bool ListenInput;
         public ISceneObjectView View; // can be null

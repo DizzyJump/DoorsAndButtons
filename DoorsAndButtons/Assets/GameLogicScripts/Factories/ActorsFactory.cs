@@ -10,12 +10,11 @@ public class ActorsFactory
         return CreateActor(world, 
             actorConfig.Position,
             actorConfig.MovementSpeed,
-            actorConfig.Radius, 
             actorConfig.ListenInput, 
             actorConfig.View);
     }
 
-    public static int CreateActor(EcsWorld world, Vector3 position, float speed, float radius, bool inputListener, ISceneObjectView view)
+    public static int CreateActor(EcsWorld world, Vector3 position, float speed, bool inputListener, ISceneObjectView view)
     {
         var entity = world.NewEntity();
 
@@ -23,7 +22,6 @@ public class ActorsFactory
         var positionPool = world.GetPool<Position>();
         var movementSpeedPool = world.GetPool<MovementSpeed>();
         var inputListenersPool = world.GetPool<InputListener>();
-        var radiusPool = world.GetPool<Radius>();
         var viewsPool = world.GetPool<View>();
 
         actorsPool.Add(entity);
@@ -33,9 +31,6 @@ public class ActorsFactory
 
         ref var speedComponent = ref movementSpeedPool.Add(entity);
         speedComponent.Value = speed;
-
-        ref var radiusComponent = ref radiusPool.Add(entity);
-        radiusComponent.Value = radius;
 
         if(inputListener)
             inputListenersPool.Add(entity);

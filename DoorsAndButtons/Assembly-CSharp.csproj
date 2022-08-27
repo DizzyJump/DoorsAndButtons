@@ -135,6 +135,9 @@
     <Compile Include="Assets\GameLogicScripts\Systems\SceneViewFeature\UpdateViewPositionSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\Button.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\ButtonEnabled.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\CanInteractWithButtons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

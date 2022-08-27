@@ -109,6 +109,16 @@
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Assets\GameLogicScripts\LeoEcs\worlds.cs" />
+    <Compile Include="Assets\GameLogicScripts\LeoEcs\components.cs" />
+    <Compile Include="Assets\GameLogicScripts\LeoEcs\systems.cs" />
+    <Compile Include="Assets\GameLogicScripts\LeoEcs\entities.cs" />
+    <Compile Include="Assets\GameLogicScripts\LeoEcs\filters.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\DoorSceneSettingsView.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\ButtonSceneSettingsView.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\PlayerSceneSettingsView.cs" />
+    <Compile Include="Assets\GameLogicScripts\Configs\LevelConfig.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\GameEntryPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

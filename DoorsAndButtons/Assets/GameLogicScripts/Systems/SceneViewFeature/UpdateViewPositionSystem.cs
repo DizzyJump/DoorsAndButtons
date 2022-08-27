@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Leopotam.EcsLite;
+using Unity.Mathematics;
 
 public class UpdateViewPositionSystem : IEcsInitSystem, IEcsRunSystem
 {

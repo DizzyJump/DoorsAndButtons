@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Leopotam.EcsLite;
+using Unity.Mathematics;
 
 public class ActorsFactory
 {
@@ -14,7 +15,7 @@ public class ActorsFactory
             actorConfig.View);
     }
 
-    public static int CreateActor(EcsWorld world, Vector3 position, float speed, bool inputListener, ISceneObjectView view)
+    public static int CreateActor(EcsWorld world, float3 position, float speed, bool inputListener, ISceneObjectView view)
     {
         var entity = world.NewEntity();
 

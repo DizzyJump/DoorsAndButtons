@@ -1,6 +1,7 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ButtonsFactory
@@ -10,7 +11,7 @@ public class ButtonsFactory
         return CreateButton(world, config.ID, config.Position, config.Radius, config.View);
     }
 
-    public static int CreateButton(EcsWorld world, int id, Vector3 position, float radius, ISceneObjectView view)
+    public static int CreateButton(EcsWorld world, int id, float3 position, float radius, ISceneObjectView view)
     {
         var entity = world.NewEntity();
 

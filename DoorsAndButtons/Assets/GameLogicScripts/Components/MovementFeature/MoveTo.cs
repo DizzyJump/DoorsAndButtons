@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public struct MoveTo
 {
-    public Vector3 Value;
+    public float3 Value;
 }

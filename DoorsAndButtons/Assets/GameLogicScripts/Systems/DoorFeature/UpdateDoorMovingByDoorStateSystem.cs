@@ -2,6 +2,7 @@ using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
 {
@@ -41,10 +42,10 @@ EcsWorld world;
         }
     }
 
-    void SetMoveTo(Vector3 targetPosition, int door)
+    void SetMoveTo(float3 targetPosition, int door)
     {
         var currentPosition = positionPool.Get(door).Value;
-        bool isCorrectPosition = (targetPosition - currentPosition).sqrMagnitude <= float.Epsilon;
+        bool isCorrectPosition = math.lengthsq(targetPosition - currentPosition) <= float.Epsilon;
         if (isCorrectPosition)
             return;
 

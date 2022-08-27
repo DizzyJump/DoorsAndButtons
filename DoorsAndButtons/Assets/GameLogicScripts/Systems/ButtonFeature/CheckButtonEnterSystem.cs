@@ -2,6 +2,7 @@ using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class CheckButtonEnterSystem : IEcsInitSystem, IEcsRunSystem
 {
@@ -32,7 +33,7 @@ public class CheckButtonEnterSystem : IEcsInitSystem, IEcsRunSystem
                 var buttonPosition = positionPool.Get(button).Value;
                 var actorPosition = positionPool.Get(actor).Value;
                 var buttonRadius = radiusPool.Get(button).Value;
-                if((buttonPosition-actorPosition).sqrMagnitude <= (buttonRadius * buttonRadius))
+                if(math.lengthsq(buttonPosition-actorPosition) <= (buttonRadius * buttonRadius))
                 {
                     activatedPool.Add(button);
                     break;

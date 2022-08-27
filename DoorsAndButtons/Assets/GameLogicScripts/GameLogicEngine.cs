@@ -1,6 +1,7 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class GameLogicEngine
@@ -40,7 +41,7 @@ public class GameLogicEngine
         systems?.Run();
     }
 
-    public void SetInput(Vector3 userChoosePosition)
+    public void SetInput(float3 userChoosePosition)
     {
         if(world!=null)
         {

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class LevelConfig
 {
     public class DoorConfig
     {
-        public Vector3 OpenPosition;
-        public Vector3 ClosedPosition;
+        public float3 OpenPosition;
+        public float3 ClosedPosition;
         public float MovingSpeed;
         public int ButtonId;
         public ISceneObjectView View; // can be null
@@ -16,14 +17,14 @@ public class LevelConfig
     public class ButtonConfig
     {
         public int ID;
-        public Vector3 Position;
+        public float3 Position;
         public float Radius;
         public ISceneObjectView View; // can be null
     }
 
     public class Actor
     {
-        public Vector3 Position;
+        public float3 Position;
         public float MovementSpeed;
         public bool ListenInput;
         public ISceneObjectView View; // can be null

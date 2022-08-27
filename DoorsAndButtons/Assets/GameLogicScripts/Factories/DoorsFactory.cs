@@ -1,6 +1,7 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class DoorsFactory
@@ -10,7 +11,7 @@ public class DoorsFactory
         return CreateDoor(world, config.OpenPosition, config.ClosedPosition, config.MovingSpeed, config.ButtonId, config.View);
     }
 
-    public static int CreateDoor(EcsWorld world, Vector3 openPosition, Vector3 closedPosition, float speed, int button, ISceneObjectView view)
+    public static int CreateDoor(EcsWorld world, float3 openPosition, float3 closedPosition, float speed, int button, ISceneObjectView view)
     {
         var entity = world.NewEntity();
 

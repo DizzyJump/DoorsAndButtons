@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class SceneObjectView : MonoBehaviour, ISceneObjectView
@@ -9,7 +10,7 @@ public class SceneObjectView : MonoBehaviour, ISceneObjectView
         Destroy(gameObject);
     }
 
-    public void UpdatePosition(Vector3 position)
+    public void UpdatePosition(float3 position)
     {
         transform.position = position;
     }

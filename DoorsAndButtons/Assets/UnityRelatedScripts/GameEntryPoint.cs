@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class GameEntryPoint : MonoBehaviour
 {
+    GameLogicEngine engine;
+
     private void Start()
     {
         // Just for testing purposes we will build level settings from unity scene.
         // In real case level settings could be stored on server side or mocked for tests
         LevelConfig levelConfig = BuildLevelConfig();
+
+        engine = new GameLogicEngine();
+        engine.Init(levelConfig);
+
+    }
+
+    private void Update()
+    {
+        engine?.Update(Time.deltaTime);
+    }
+
+    private void OnDestroy()
+    {
+        engine?.Shootdown();
     }
 
     LevelConfig BuildLevelConfig()

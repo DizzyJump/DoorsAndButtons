@@ -119,6 +119,8 @@
     <Compile Include="Assets\UnityRelatedScripts\PlayerSceneSettingsView.cs" />
     <Compile Include="Assets\GameLogicScripts\Configs\LevelConfig.cs" />
     <Compile Include="Assets\UnityRelatedScripts\GameEntryPoint.cs" />
+    <Compile Include="Assets\GameLogicScripts\GameLogicEngine.cs" />
+    <Compile Include="Assets\GameLogicScripts\SharedData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

@@ -805,7 +805,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -830,8 +830,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.2408909, y: 0.7178711, z: -0.5815621, w: -0.29735196}
-  m_LocalPosition: {x: 3, y: 20, z: 3}
+  m_LocalRotation: {x: -0.1377289, y: 0.85576594, z: -0.4049407, w: -0.2910646}
+  m_LocalPosition: {x: 10, y: 20, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpenPosition: {x: -21.61, y: 2, z: -3.31}
-  MovingSpeed: 1
+  MovingSpeed: 5
   ButtonToOpen: {fileID: 480552122}
 --- !u!114 &1234611851
 MonoBehaviour:
@@ -1330,8 +1330,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454222631}
-  m_LocalRotation: {x: -0.2408909, y: 0.7178711, z: -0.5815621, w: -0.29735196}
-  m_LocalPosition: {x: 1.5, y: 10, z: 1.5}
+  m_LocalRotation: {x: -0.1377289, y: 0.85576594, z: -0.4049407, w: -0.2910646}
+  m_LocalPosition: {x: 5, y: 10, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1486568879}
   m_Follow: {fileID: 1486568879}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 3, y: 20, z: 3}
+  m_FollowOffset: {x: 10, y: 20, z: 13}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpenPosition: {x: -4.7, y: 2, z: 14.42}
-  MovingSpeed: 1
+  MovingSpeed: 5
   ButtonToOpen: {fileID: 2026812901}
 --- !u!114 &1882077716
 MonoBehaviour:

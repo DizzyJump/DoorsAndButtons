@@ -44,7 +44,6 @@ public class CheckButtonLeaveSystem : IEcsInitSystem, IEcsRunSystem
             if(nobodyInside)
             {
                 activatedPool.Del(button);
-                Debug.Log("button deactivated");
             }
         } 
     }

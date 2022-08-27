@@ -1,0 +1,62 @@
+using Leopotam.EcsLite;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
+{
+EcsWorld world;
+
+    EcsFilter activatedDoorsFilter;
+    EcsFilter deactivatedDoorsFilter;
+
+    EcsPool<MoveTo> moveToPool;
+    EcsPool<Position> positionPool;
+    EcsPool<DoorSettings> doorSettingsPool;
+
+    public void Init(IEcsSystems systems)
+    {
+        world = systems.GetWorld();
+
+        activatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Inc<Activated>().End();
+        deactivatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Exc<Activated>().End();
+
+        moveToPool = world.GetPool<MoveTo>();
+        doorSettingsPool = world.GetPool<DoorSettings>();
+        positionPool = world.GetPool<Position>();
+    }
+
+    public void Run(IEcsSystems systems)
+    {
+        foreach(var door in activatedDoorsFilter)
+        {
+            var targetPosition = doorSettingsPool.Get(door).OpenPosition;
+            SetMoveTo(targetPosition, door);
+        }
+
+        foreach (var door in deactivatedDoorsFilter)
+        {
+            var targetPosition = doorSettingsPool.Get(door).ClosedPosition;
+            SetMoveTo(targetPosition, door);
+        }
+    }
+
+    void SetMoveTo(Vector3 targetPosition, int door)
+    {
+        var currentPosition = positionPool.Get(door).Value;
+        bool isCorrectPosition = (targetPosition - currentPosition).sqrMagnitude <= float.Epsilon;
+        if (isCorrectPosition)
+            return;
+
+        if (moveToPool.Has(door))
+        {
+            ref var moveTo = ref moveToPool.Get(door);
+            moveTo.Value = targetPosition;
+        }
+        else
+        {
+            ref var moveTo = ref moveToPool.Add(door);
+            moveTo.Value = targetPosition;
+        }
+    }
+}

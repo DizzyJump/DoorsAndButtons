@@ -22,6 +22,7 @@ public class GameLogicEngine
             .Add(new CheckButtonEnterSystem())
             .Add(new FindButtonLinkByIdSystem())
             .Add(new UpdateDoorStateByButtonSystem())
+            .Add(new UpdateDoorMovingByDoorStateSystem())
             .Add(new UpdateViewPositionSystem())
 #if UNITY_EDITOR
         // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:

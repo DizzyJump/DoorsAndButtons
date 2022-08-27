@@ -35,7 +35,6 @@ public class CheckButtonEnterSystem : IEcsInitSystem, IEcsRunSystem
                 if((buttonPosition-actorPosition).sqrMagnitude <= (buttonRadius * buttonRadius))
                 {
                     activatedPool.Add(button);
-                    Debug.Log("button activated");
                     break;
                 }
             }

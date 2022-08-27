@@ -9,27 +9,32 @@ public class GameLogicEngine
     EcsSystems systems;
     SharedData sharedData;
 
-    public void Init(LevelConfig levelConfig)
+    public void Init(LevelConfig levelConfig, bool server)
     {
         sharedData = new SharedData();
         world = new EcsWorld();
         systems = new EcsSystems(world, sharedData);
 
         systems
+
             .Add(new UserInputRequestProcessingSystem())
             .Add(new UpdateMovingSystem())
             .Add(new CheckButtonLeaveSystem())
             .Add(new CheckButtonEnterSystem())
             .Add(new FindButtonLinkByIdSystem())
             .Add(new UpdateDoorStateByButtonSystem())
-            .Add(new UpdateDoorMovingByDoorStateSystem())
-            .Add(new UpdateViewPositionSystem())
-#if UNITY_EDITOR
-        // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:
-        // .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ("events"))
-        .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
-#endif
-        .Init();
+            .Add(new UpdateDoorMovingByDoorStateSystem());
+
+        if(!server)
+            systems
+        #if UNITY_EDITOR
+                // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:
+                // .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ("events"))
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+        #endif
+                .Add(new UpdateViewPositionSystem());
+
+        systems.Init();
 
         CreateLevelFromConfig(levelConfig);
     }

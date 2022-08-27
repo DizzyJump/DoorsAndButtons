@@ -13,7 +13,7 @@ public class GameEntryPoint : MonoBehaviour
         LevelConfig levelConfig = BuildLevelConfig();
 
         engine = new GameLogicEngine();
-        engine.Init(levelConfig);
+        engine.Init(levelConfig, false);
 
     }
 

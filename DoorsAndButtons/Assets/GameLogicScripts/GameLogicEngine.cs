@@ -15,7 +15,10 @@ public class GameLogicEngine
         world = new EcsWorld();
         systems = new EcsSystems(world, sharedData);
 
+
         systems.Init();
+
+        CreateLevelFromConfig(levelConfig);
     }
 
     public void Update(float dt)
@@ -48,5 +51,13 @@ public class GameLogicEngine
             world.Destroy();
             world = null;
         }    
+    }
+
+    void CreateLevelFromConfig(LevelConfig config)
+    {
+        foreach(var actor in config.Actors)
+        {
+            ActorsFactory.CreateActor(world, actor.Position, actor.MovementSpeed);
+        }
     }
 }

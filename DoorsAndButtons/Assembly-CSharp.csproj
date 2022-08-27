@@ -126,6 +126,7 @@
     <Compile Include="Assets\GameLogicScripts\Components\MovementFeature\MovementSpeed.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\MovementFeature\MoveTo.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\UserInputFeature\MovementRequest.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ActorsFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

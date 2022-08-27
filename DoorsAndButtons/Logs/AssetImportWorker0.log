@@ -5014,3 +5014,159 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024793 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.682 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2683ms)
+		BeginReloadAssembly (222ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (2339ms)
+			LoadAssemblies (149ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (261ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (1867ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (1712ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.3 KB). Loaded Objects now: 4217.
+Memory consumption went from 137.8 MB to 137.7 MB.
+Total: 3.519500 ms (FindLiveObjects: 0.292500 ms CreateObjectMapping: 0.205000 ms MarkObjects: 2.929700 ms  DeleteObjects: 0.091100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024029 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\git\DoorsAndButtons\DoorsAndButtons\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.746 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2747ms)
+		BeginReloadAssembly (298ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (2331ms)
+			LoadAssemblies (227ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (253ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (1865ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (1716ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.5 KB). Loaded Objects now: 4220.
+Memory consumption went from 137.8 MB to 137.7 MB.
+Total: 3.348400 ms (FindLiveObjects: 0.281600 ms CreateObjectMapping: 0.186900 ms MarkObjects: 2.788000 ms  DeleteObjects: 0.090600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 812.491544 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57825d58e9f3a1122d91ef9fcd70057') in 0.012257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 121.250353 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8735a2137175463e220b142e96b5064') in 0.003878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.386368 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5b8f8ffcf6e2ae37a0cb023ce74ba8f') in 0.003430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 171.512415 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac68f9f13b4aeb1b82129ffb6dade76d') in 0.004431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 234.458462 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7a8eb43b7602f9ec6bbeb6345a4455') in 0.004718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.921199 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbb9a3f56d877505af0578b1fbd8d6ad') in 0.003726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.451928 seconds.
+  path: Assets/GameLogicScripts/Components/ActorsFactory.cs
+  artifactKey: Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameLogicScripts/Components/ActorsFactory.cs using Guid(fcfb70c75a6e4674ba41a6634ad1e51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '649b98bbf781359b173db4f02f180791') in 0.003953 seconds 

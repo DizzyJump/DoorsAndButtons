@@ -21,7 +21,7 @@ public class LevelConfig
     public class Actor
     {
         public Vector3 Position;
-        public Quaternion Rotation;
+        public float MovementSpeed;
     }
 
     public List<DoorConfig> Doors;

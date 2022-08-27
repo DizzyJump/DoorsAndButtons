@@ -26,7 +26,13 @@ public class GameLogicEngine
 
     public void SetInput(Vector3 userChoosePosition)
     {
-
+        if(world!=null)
+        {
+            var requestEntity = world.NewEntity();
+            var pool = world.GetPool<MovementRequest>();
+            var request = pool.Add(requestEntity);
+            request.Value = userChoosePosition;
+        }
     }
 
     public void Shootdown()

@@ -121,6 +121,11 @@
     <Compile Include="Assets\UnityRelatedScripts\GameEntryPoint.cs" />
     <Compile Include="Assets\GameLogicScripts\GameLogicEngine.cs" />
     <Compile Include="Assets\GameLogicScripts\SharedData.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\Actor.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\MovementFeature\Position.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\MovementFeature\MovementSpeed.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\MovementFeature\MoveTo.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\UserInputFeature\MovementRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

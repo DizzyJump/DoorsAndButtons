@@ -19,7 +19,25 @@ public class GameEntryPoint : MonoBehaviour
 
     private void Update()
     {
+        CheckUserInput();
         engine?.Update(Time.deltaTime);
+    }
+
+    void CheckUserInput()
+    {
+        if(engine != null && Input.GetMouseButtonUp(0))
+        {
+            Plane plane = new Plane(Vector3.up, Vector3.zero);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            float distance = 0;
+            if(plane.Raycast(ray, out distance))
+            {
+                var targetPoint = ray.GetPoint(distance);
+                targetPoint.y = 0;
+                engine.SetInput(targetPoint);
+            }
+
+        }
     }
 
     private void OnDestroy()
@@ -60,7 +78,7 @@ public class GameEntryPoint : MonoBehaviour
         {
             LevelConfig.Actor workActor = new LevelConfig.Actor();
             workActor.Position = player.Position;
-            workActor.Rotation = player.Rotation;
+            workActor.MovementSpeed = player.MovementSpeed;
         }
 
         return config;

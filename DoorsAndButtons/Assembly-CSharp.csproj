@@ -133,6 +133,8 @@
     <Compile Include="Assets\UnityRelatedScripts\SceneObjectView.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\SceneViewFeature\View.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\SceneViewFeature\UpdateViewPositionSystem.cs" />
+    <Compile Include="Assets\GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs" />
+    <Compile Include="Assets\GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

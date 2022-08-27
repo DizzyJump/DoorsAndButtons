@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4735c151d7354a94391eec9646572c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 1
+  MovementSpeed: 20
   Radius: 1
   isListenInput: 1
 --- !u!114 &1486568881

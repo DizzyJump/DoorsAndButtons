@@ -16,6 +16,8 @@ public class GameLogicEngine
         systems = new EcsSystems(world, sharedData);
 
         systems
+            .Add(new UserInputRequestProcessingSystem())
+            .Add(new UpdateMovingSystem())
             .Add(new UpdateViewPositionSystem());
 
         systems.Init();
@@ -35,7 +37,7 @@ public class GameLogicEngine
         {
             var requestEntity = world.NewEntity();
             var pool = world.GetPool<MovementRequest>();
-            var request = pool.Add(requestEntity);
+            ref var request = ref pool.Add(requestEntity);
             request.Value = userChoosePosition;
         }
     }

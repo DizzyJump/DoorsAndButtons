@@ -8,9 +8,9 @@ public class ActorsFactory
     public static int CreateActor(EcsWorld world, LevelConfig.Actor actorConfig)
     {
         return CreateActor(world, 
-            actorConfig.Position, 
+            actorConfig.Position,
+            actorConfig.MovementSpeed,
             actorConfig.Radius, 
-            actorConfig.MovementSpeed, 
             actorConfig.ListenInput, 
             actorConfig.View);
     }

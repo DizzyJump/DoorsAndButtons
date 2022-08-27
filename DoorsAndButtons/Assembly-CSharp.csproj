@@ -153,6 +153,7 @@
     <Compile Include="Assets\GameLogicScripts\Systems\DoorFeature\UpdateDoorStateByButtonSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\DoorFeature\UpdateDoorMovingByDoorStateSystem.cs" />
     <Compile Include="Assets\UnityRelatedScripts\PlayerController.cs" />
+    <Compile Include="Assets\GameLogicScripts\Helpers\MathHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

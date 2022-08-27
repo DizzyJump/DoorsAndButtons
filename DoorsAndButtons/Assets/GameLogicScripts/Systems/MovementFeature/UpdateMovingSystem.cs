@@ -1,7 +1,6 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Unity.Mathematics;
 
 public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
@@ -33,7 +32,7 @@ public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
             var speed = speedPool.Get(entity).Value;
             ref var position = ref positionPool.Get(entity);
 
-            position.Value = Vector3.MoveTowards(position.Value, moveToPosition, speed * sharedData.deltaTime);
+            position.Value = MathHelpers.MoveTowards(position.Value, moveToPosition, speed * sharedData.deltaTime);
             if(math.lengthsq(position.Value - moveToPosition) < float.Epsilon)
             {
                 position.Value = moveToPosition;

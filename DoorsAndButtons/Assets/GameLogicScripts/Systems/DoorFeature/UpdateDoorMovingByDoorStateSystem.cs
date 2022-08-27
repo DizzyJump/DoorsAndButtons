@@ -1,7 +1,6 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Unity.Mathematics;
 
 public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem

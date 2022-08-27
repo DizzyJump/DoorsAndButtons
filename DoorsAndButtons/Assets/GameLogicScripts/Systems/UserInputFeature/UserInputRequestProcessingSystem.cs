@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Leopotam.EcsLite;
 
 public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem

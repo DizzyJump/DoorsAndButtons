@@ -63,5 +63,10 @@ public class GameLogicEngine
         {
             ActorsFactory.CreateActor(world, actor);
         }
+
+        foreach(var button in config.Buttons)
+        {
+            int entity = ButtonsFactory.CreateButton(world, button);
+        }
     }
 }

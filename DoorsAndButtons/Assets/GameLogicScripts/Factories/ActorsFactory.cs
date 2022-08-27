@@ -23,6 +23,7 @@ public class ActorsFactory
         var movementSpeedPool = world.GetPool<MovementSpeed>();
         var inputListenersPool = world.GetPool<InputListener>();
         var viewsPool = world.GetPool<View>();
+        var buttonInteractionPool = world.GetPool<CanInteractWithButtons>();
 
         actorsPool.Add(entity);
 
@@ -39,7 +40,10 @@ public class ActorsFactory
         {
             ref var viewComponent = ref viewsPool.Add(entity);
             viewComponent.Value = view;
-        }    
+        }
+
+        buttonInteractionPool.Add(entity);
+
         return entity;
     }
 }

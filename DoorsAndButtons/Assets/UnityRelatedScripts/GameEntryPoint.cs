@@ -78,7 +78,9 @@ public class GameEntryPoint : MonoBehaviour
         {
             LevelConfig.Actor workActor = new LevelConfig.Actor();
             workActor.Position = player.Position;
+            workActor.Radius = player.Radius;
             workActor.MovementSpeed = player.MovementSpeed;
+            workActor.ListenInput = player.isListenInput;
         }
 
         return config;

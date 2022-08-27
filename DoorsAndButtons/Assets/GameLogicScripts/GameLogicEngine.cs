@@ -57,7 +57,7 @@ public class GameLogicEngine
     {
         foreach(var actor in config.Actors)
         {
-            ActorsFactory.CreateActor(world, actor.Position, actor.MovementSpeed);
+            ActorsFactory.CreateActor(world, actor.Position, actor.Radius, actor.MovementSpeed, true);
         }
     }
 }

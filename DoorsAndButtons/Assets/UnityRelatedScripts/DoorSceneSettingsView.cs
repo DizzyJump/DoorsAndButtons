@@ -8,6 +8,7 @@ public class DoorSceneSettingsView : MonoBehaviour
     public Vector3 OpenPosition;
     public float MovingSpeed;
     public ButtonSceneSettingsView ButtonToOpen;
+    public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();
 
     private void OnDrawGizmosSelected()
     {

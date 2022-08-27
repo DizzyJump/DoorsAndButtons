@@ -10,12 +10,14 @@ public class LevelConfig
         public Vector3 ClosedPosition;
         public float MovingSpeed;
         public int ButtonId;
+        public ISceneObjectView View; // can be null
     }
 
     public class ButtonConfig
     {
         public Vector3 Position;
         public float Radius;
+        public ISceneObjectView View; // can be null
     }
 
     public class Actor
@@ -24,6 +26,7 @@ public class LevelConfig
         public float Radius;
         public float MovementSpeed;
         public bool ListenInput;
+        public ISceneObjectView View; // can be null
     }
 
     public List<DoorConfig> Doors;

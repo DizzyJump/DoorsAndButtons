@@ -61,6 +61,7 @@ public class GameEntryPoint : MonoBehaviour
             workDoor.ClosedPosition = door.ClosedPosition;
             workDoor.MovingSpeed = door.MovingSpeed;
             workDoor.ButtonId = door.ButtonToOpen.ID;
+            workDoor.View = door.View;
 
             config.Doors.Add(workDoor);
         }
@@ -71,6 +72,9 @@ public class GameEntryPoint : MonoBehaviour
             LevelConfig.ButtonConfig workButton = new LevelConfig.ButtonConfig();
             workButton.Position = button.Position;
             workButton.Radius = button.Radius;
+            workButton.View = button.View;
+
+            config.Buttons.Add(workButton);
         }
 
         // fill actors config data. There are only player so far
@@ -81,6 +85,9 @@ public class GameEntryPoint : MonoBehaviour
             workActor.Radius = player.Radius;
             workActor.MovementSpeed = player.MovementSpeed;
             workActor.ListenInput = player.isListenInput;
+            workActor.View = player.View;
+
+            config.Actors.Add(workActor);
         }
 
         return config;

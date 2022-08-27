@@ -99,6 +99,36 @@
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\EcsEntityDebugView.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntity.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector3.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\TemplateGenerator.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Rect.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Int.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector3Int.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Long.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Bounds.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Quaternion.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\BoundsInt.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector4.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Bool.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color32.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2Int.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Float.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Double.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntityWithWorld.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\String.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Gradient.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\LayerMask.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\AnimationCurve.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\RunSystem.cs.txt" />
+    <None Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\InitSystem.cs.txt" />
+    <None Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\Component.cs.txt" />
+    <None Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\Startup.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

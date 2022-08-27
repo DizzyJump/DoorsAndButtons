@@ -20,9 +20,15 @@ public class GameLogicEngine
             .Add(new UpdateMovingSystem())
             .Add(new CheckButtonLeaveSystem())
             .Add(new CheckButtonEnterSystem())
-            .Add(new UpdateViewPositionSystem());
-
-        systems.Init();
+            .Add(new FindButtonLinkByIdSystem())
+            .Add(new UpdateDoorStateByButtonSystem())
+            .Add(new UpdateViewPositionSystem())
+#if UNITY_EDITOR
+        // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:
+        // .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ("events"))
+        .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+#endif
+        .Init();
 
         CreateLevelFromConfig(levelConfig);
     }
@@ -62,13 +68,12 @@ public class GameLogicEngine
     void CreateLevelFromConfig(LevelConfig config)
     {
         foreach(var actor in config.Actors)
-        {
             ActorsFactory.CreateActor(world, actor);
-        }
 
         foreach(var button in config.Buttons)
-        {
-            int entity = ButtonsFactory.CreateButton(world, button);
-        }
+            ButtonsFactory.CreateButton(world, button);
+
+        foreach (var door in config.Doors)
+            DoorsFactory.CreateDoor(world, door);
     }
 }

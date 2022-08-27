@@ -7,19 +7,23 @@ public class ButtonsFactory
 {
     public static int CreateButton(EcsWorld world, LevelConfig.ButtonConfig config)
     {
-        return CreateButton(world, config.Position, config.Radius, config.View);
+        return CreateButton(world, config.ID, config.Position, config.Radius, config.View);
     }
 
-    public static int CreateButton(EcsWorld world, Vector3 position, float radius, ISceneObjectView view)
+    public static int CreateButton(EcsWorld world, int id, Vector3 position, float radius, ISceneObjectView view)
     {
         var entity = world.NewEntity();
 
         var buttonsPool = world.GetPool<Button>();
+        var IdsPool = world.GetPool<ID>();
         var positionPool = world.GetPool<Position>();
         var radiusPool = world.GetPool<Radius>();
         var viewsPool = world.GetPool<View>();
 
         buttonsPool.Add(entity);
+
+        ref var IdComponent = ref IdsPool.Add(entity);
+        IdComponent.Value = id;
 
         ref var positionComponent = ref positionPool.Add(entity);
         positionComponent.Value = position;

@@ -136,11 +136,17 @@
     <Compile Include="Assets\GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\Button.cs" />
-    <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\Activated.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\Activated.cs" />
     <Compile Include="Assets\GameLogicScripts\Components\ButtonFeature\CanInteractWithButtons.cs" />
     <Compile Include="Assets\GameLogicScripts\Factories\ButtonsFactory.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\ButtonFeature\CheckButtonEnterSystem.cs" />
     <Compile Include="Assets\GameLogicScripts\Systems\ButtonFeature\CheckButtonLeaveSystem.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\DoorFeature\Door.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\DoorFeature\DoorSettings.cs" />
+    <Compile Include="Assets\GameLogicScripts\Factories\DoorsFactory.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\DoorFeature\DoorActivationButtonID.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\DoorFeature\DoorActivationButtonLink.cs" />
+    <Compile Include="Assets\GameLogicScripts\Components\ID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

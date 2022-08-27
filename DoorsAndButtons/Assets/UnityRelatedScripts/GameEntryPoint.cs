@@ -70,6 +70,7 @@ public class GameEntryPoint : MonoBehaviour
         foreach(var button in buttonsInScene)
         {
             LevelConfig.ButtonConfig workButton = new LevelConfig.ButtonConfig();
+            workButton.ID = button.ID;
             workButton.Position = button.Position;
             workButton.Radius = button.Radius;
             workButton.View = button.View;

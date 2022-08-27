@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct DoorActivationButtonID
+public struct ButtonLinkRequest
 {
-    public int Value;
+    public int ButtonID;
 }

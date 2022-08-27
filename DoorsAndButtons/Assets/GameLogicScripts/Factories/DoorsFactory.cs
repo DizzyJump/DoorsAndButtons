@@ -15,7 +15,7 @@ public class DoorsFactory
         var entity = world.NewEntity();
 
         var doorsPool = world.GetPool<Door>();
-        var buttonPool = world.GetPool<DoorActivationButtonID>();
+        var buttonPool = world.GetPool<ButtonLinkRequest>();
         var positionPool = world.GetPool<Position>();
         var movementSpeedPool = world.GetPool<MovementSpeed>();
         var doorSettingsPool = world.GetPool<DoorSettings>();
@@ -24,7 +24,7 @@ public class DoorsFactory
         doorsPool.Add(entity);
 
         ref var buttonIdComponent = ref buttonPool.Add(entity);
-        buttonIdComponent.Value = button;
+        buttonIdComponent.ButtonID = button;
 
 
         ref var positionComponent = ref positionPool.Add(entity);

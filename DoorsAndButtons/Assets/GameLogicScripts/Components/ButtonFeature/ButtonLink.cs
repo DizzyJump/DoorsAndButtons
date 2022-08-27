@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct DoorActivationButtonLink
+public struct ButtonLink
 {
     public EcsPackedEntity Value;
 }

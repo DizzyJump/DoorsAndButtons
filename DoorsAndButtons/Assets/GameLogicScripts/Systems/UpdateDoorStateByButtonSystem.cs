@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Leopotam.EcsLite;
 
+// System set activity state of doors according to activity state of linked button
 public class UpdateDoorStateByButtonSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsWorld world;

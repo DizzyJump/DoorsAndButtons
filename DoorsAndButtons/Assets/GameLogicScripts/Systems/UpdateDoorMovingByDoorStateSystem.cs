@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 
+// System update MoveTo component on Doors according to they activity state
 public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
 {
 EcsWorld world;

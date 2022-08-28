@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Leopotam.EcsLite;
 using Unity.Mathematics;
 
+// Send update of entity position to the View component
 public class UpdateViewPositionSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter filter;

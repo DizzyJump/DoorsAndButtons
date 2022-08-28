@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 
+// System check are any entity with ability to interact is near enough
+// to non active button and mark that button as active by adding Activated component
 public class CheckButtonEnterSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter actorsFilter;

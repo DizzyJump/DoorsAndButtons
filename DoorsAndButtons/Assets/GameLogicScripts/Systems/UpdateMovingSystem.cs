@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 
+// Update Position components on entities if they have MoveTo component
 public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter filter;

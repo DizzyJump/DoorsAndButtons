@@ -2,6 +2,8 @@ using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
 
+// System resolve dependencies to buttons for entities that have ButtonLinkRequest component.
+// System find specific button and store link on it in ButtonLink component.
 public class FindButtonLinkByIdSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsWorld world;

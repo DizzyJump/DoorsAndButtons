@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Leopotam.EcsLite;
 
+// System collect user input requests and update MoveTo component
+// on entities marked by InputListener components according this requests.
 public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter listenersFilter;

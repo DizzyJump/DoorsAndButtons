@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 
-
+// System check are all entities with ability to interact are far enough
+// from button and mark that button deactivated by removing Activated component
 public class CheckButtonLeaveSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter actorsFilter;

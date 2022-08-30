@@ -56,73 +56,73 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
-    <Compile Include="Assets\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
-    <Compile Include="Assets\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
-    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\EcsEntityDebugView.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntity.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector3.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\TemplateGenerator.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Rect.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Int.cs" />
     <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector3Int.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Long.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Bounds.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Quaternion.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\BoundsInt.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector4.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Bool.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color32.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2Int.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Float.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Double.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntityWithWorld.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
     <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\String.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Gradient.cs" />
-    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\LayerMask.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntityWithWorld.cs" />
     <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\AnimationCurve.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Ecs\EcsPackedEntity.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\BoundsInt.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector3.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color32.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Rect.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Bool.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Float.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Quaternion.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector2Int.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Gradient.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Long.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Double.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\EcsEntityDebugView.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\LayerMask.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\TemplateGenerator.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Int.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector4.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
+    <Compile Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Bounds.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\RunSystem.cs.txt" />
@@ -415,6 +415,21 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -866,6 +881,9 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
@@ -878,23 +896,36 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{E801A2BC-3D45-4C2D-CFEE-0B7A7040AE08}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{871831D5-50AE-A0CB-5FBB-333085DC4D05}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{B641889A-CA93-E837-3034-6966E5E74979}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{CEC9EA3F-0583-64E2-992E-A3465D380B7E}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{6CE07D1E-4A0A-A719-9504-6DCC6309C292}</Project>
+      <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

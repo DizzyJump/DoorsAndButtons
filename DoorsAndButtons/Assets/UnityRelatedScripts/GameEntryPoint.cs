@@ -5,13 +5,13 @@ using Zenject;
 
 public class GameEntryPoint : MonoBehaviour
 {
-    GameLogicEngine engine;
+    [Inject] GameLogicEngine engine;
     [Inject] LevelConfig levelConfig;
 
     private void Start()
     {
-        engine = new GameLogicEngine();
-        engine.Init(levelConfig, false);
+        //engine = new GameLogicEngine();
+        //engine.Init(levelConfig, false);
     }
 
     private void Update()

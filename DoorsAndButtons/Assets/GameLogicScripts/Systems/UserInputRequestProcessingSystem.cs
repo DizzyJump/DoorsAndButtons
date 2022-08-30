@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Leopotam.EcsLite;
+using Zenject;
 
 // System collect user input requests and update MoveTo component
 // on entities marked by InputListener components according this requests.
@@ -9,8 +10,8 @@ public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter listenersFilter;
     EcsFilter requestsFilter;
 
-    EcsPool<MovementRequest> requestsPool;
-    EcsPool<MoveTo> moveToPool;
+    [Inject] EcsPool<MovementRequest> requestsPool;
+    [Inject] EcsPool<MoveTo> moveToPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -18,8 +19,8 @@ public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
 
         listenersFilter = world.Filter<InputListener>().End();
         requestsFilter = world.Filter<MovementRequest>().End();
-        requestsPool = world.GetPool<MovementRequest>();
-        moveToPool = world.GetPool<MoveTo>();
+        //requestsPool = world.GetPool<MovementRequest>();
+        //moveToPool = world.GetPool<MoveTo>();
     }
 
     public void Run(IEcsSystems systems)

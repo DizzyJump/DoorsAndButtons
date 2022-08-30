@@ -1,6 +1,7 @@
 using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
+using Zenject;
 
 // System resolve dependencies to buttons for entities that have ButtonLinkRequest component.
 // System find specific button and store link on it in ButtonLink component.
@@ -11,9 +12,9 @@ public class FindButtonLinkByIdSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter requestsFilter;
     EcsFilter buttonsFilter;
 
-    EcsPool<ID> IdsPool;
-    EcsPool<ButtonLinkRequest> requestsPool;
-    EcsPool<ButtonLink> linksPool;
+    [Inject] EcsPool<ID> IdsPool;
+    [Inject] EcsPool<ButtonLinkRequest> requestsPool;
+    [Inject] EcsPool<ButtonLink> linksPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -22,9 +23,9 @@ public class FindButtonLinkByIdSystem : IEcsInitSystem, IEcsRunSystem
         requestsFilter = world.Filter<ButtonLinkRequest>().Exc<ButtonLink>().End();
         buttonsFilter = world.Filter<ID>().Inc<Button>().End();
 
-        requestsPool = world.GetPool<ButtonLinkRequest>();
-        linksPool = world.GetPool<ButtonLink>();
-        IdsPool = world.GetPool<ID>();
+        //requestsPool = world.GetPool<ButtonLinkRequest>();
+        //linksPool = world.GetPool<ButtonLink>();
+        //IdsPool = world.GetPool<ID>();
     }
 
     public void Run(IEcsSystems systems)

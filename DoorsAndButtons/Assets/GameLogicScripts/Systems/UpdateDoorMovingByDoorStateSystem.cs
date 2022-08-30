@@ -2,6 +2,7 @@ using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Zenject;
 
 // System update MoveTo component on Doors according to they activity state
 public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
@@ -11,9 +12,9 @@ EcsWorld world;
     EcsFilter activatedDoorsFilter;
     EcsFilter deactivatedDoorsFilter;
 
-    EcsPool<MoveTo> moveToPool;
-    EcsPool<Position> positionPool;
-    EcsPool<DoorSettings> doorSettingsPool;
+    [Inject] EcsPool<MoveTo> moveToPool;
+    [Inject] EcsPool<Position> positionPool;
+    [Inject] EcsPool<DoorSettings> doorSettingsPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -22,9 +23,9 @@ EcsWorld world;
         activatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Inc<Activated>().End();
         deactivatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Exc<Activated>().End();
 
-        moveToPool = world.GetPool<MoveTo>();
-        doorSettingsPool = world.GetPool<DoorSettings>();
-        positionPool = world.GetPool<Position>();
+        //moveToPool = world.GetPool<MoveTo>();
+        //doorSettingsPool = world.GetPool<DoorSettings>();
+        //positionPool = world.GetPool<Position>();
     }
 
     public void Run(IEcsSystems systems)

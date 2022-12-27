@@ -11,8 +11,8 @@ public class UpdateDoorStateByButtonSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter activatedDoorsFilter;
     EcsFilter deactivatedDoorsFilter;
 
-    [Inject] EcsPool<Activated> activatedPool;
-    [Inject] EcsPool<ButtonLink> linksPool;
+    EcsPool<Activated> activatedPool;
+    EcsPool<ButtonLink> linksPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -21,8 +21,8 @@ public class UpdateDoorStateByButtonSystem : IEcsInitSystem, IEcsRunSystem
         activatedDoorsFilter = world.Filter<Door>().Inc<ButtonLink>().Inc<Activated>().End();
         deactivatedDoorsFilter = world.Filter<Door>().Inc<ButtonLink>().Exc<Activated>().End();
 
-        //activatedPool = world.GetPool<Activated>();
-        //linksPool = world.GetPool<ButtonLink>();
+        activatedPool = world.GetPool<Activated>();
+        linksPool = world.GetPool<ButtonLink>();
     }
 
     public void Run(IEcsSystems systems)

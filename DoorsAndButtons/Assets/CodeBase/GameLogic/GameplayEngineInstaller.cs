@@ -8,10 +8,33 @@ public class GameplayEngineInstaller : Installer<GameplayEngineInstaller>
     {
         BindEcsSystems();
         
-        Container.Bind<GameplayEngine>().AsTransient().WithArguments(false);
+        Container.Bind<GameplayEngine>().AsTransient();
     }
 
     private void BindEcsSystems()
+    {
+        BindCommonSystems();
+        
+        #if !SERVER_BUILD
+        BindClientSystems();
+        #endif
+        
+        #if UNITY_EDITOR
+        BindDebugSystems();
+        #endif
+    }
+
+    private void BindDebugSystems()
+    {
+        BindSystem<Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem>();
+    }
+
+    private void BindClientSystems()
+    {
+        BindSystem<UpdateViewPositionSystem>();
+    }
+
+    private void BindCommonSystems()
     {
         BindSystem<CheckButtonEnterSystem>();
         BindSystem<CheckButtonLeaveSystem>();
@@ -19,12 +42,11 @@ public class GameplayEngineInstaller : Installer<GameplayEngineInstaller>
         BindSystem<UpdateDoorMovingByDoorStateSystem>();
         BindSystem<UpdateDoorStateByButtonSystem>();
         BindSystem<UpdateMovingSystem>();
-        BindSystem<UpdateViewPositionSystem>();
         BindSystem<UserInputRequestProcessingSystem>();
     }
 
-    void BindSystem<TSystem>()
+    void BindSystem<TSystem>() where TSystem : IEcsSystem
     {
-        Container.BindInterfacesTo<TSystem>().AsTransient();
+        Container.Bind<IEcsSystem>().To<TSystem>().AsTransient();
     }
 }

@@ -9,15 +9,15 @@ public class UpdateViewPositionSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter filter;
 
-    [Inject] EcsPool<View> viewPools;
-    [Inject] EcsPool<Position> positionPool;
+    EcsPool<View> viewPools;
+    EcsPool<Position> positionPool;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
         filter = world.Filter<View>().Inc<Position>().End();
-        //viewPools = world.GetPool<View>();
-        //positionPool = world.GetPool<Position>();
+        viewPools = world.GetPool<View>();
+        positionPool = world.GetPool<Position>();
     }
 
     public void Run(IEcsSystems systems)

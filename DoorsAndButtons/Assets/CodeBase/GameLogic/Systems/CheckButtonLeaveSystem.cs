@@ -11,9 +11,9 @@ public class CheckButtonLeaveSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter actorsFilter;
     EcsFilter buttonsFilter;
 
-    [Inject] EcsPool<Position> positionPool;
-    [Inject] EcsPool<Radius> radiusPool;
-    [Inject] EcsPool<Activated> activatedPool;
+    EcsPool<Position> positionPool; 
+    EcsPool<Radius> radiusPool;
+    EcsPool<Activated> activatedPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -22,9 +22,9 @@ public class CheckButtonLeaveSystem : IEcsInitSystem, IEcsRunSystem
         actorsFilter = world.Filter<CanInteractWithButtons>().Inc<Position>().End();
         buttonsFilter = world.Filter<Button>().Inc<Position>().Inc<Radius>().Inc<Activated>().End();
 
-        //positionPool = world.GetPool<Position>();
-        //radiusPool = world.GetPool<Radius>();
-        //activatedPool = world.GetPool<Activated>();
+        positionPool = world.GetPool<Position>();
+        radiusPool = world.GetPool<Radius>();
+        activatedPool = world.GetPool<Activated>();
     }
 
     public void Run(IEcsSystems systems)

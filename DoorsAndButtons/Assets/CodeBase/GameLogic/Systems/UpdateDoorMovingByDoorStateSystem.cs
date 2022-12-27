@@ -12,9 +12,9 @@ EcsWorld world;
     EcsFilter activatedDoorsFilter;
     EcsFilter deactivatedDoorsFilter;
 
-    [Inject] EcsPool<MoveTo> moveToPool;
-    [Inject] EcsPool<Position> positionPool;
-    [Inject] EcsPool<DoorSettings> doorSettingsPool;
+    EcsPool<MoveTo> moveToPool;
+    EcsPool<Position> positionPool;
+    EcsPool<DoorSettings> doorSettingsPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -23,9 +23,9 @@ EcsWorld world;
         activatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Inc<Activated>().End();
         deactivatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Exc<Activated>().End();
 
-        //moveToPool = world.GetPool<MoveTo>();
-        //doorSettingsPool = world.GetPool<DoorSettings>();
-        //positionPool = world.GetPool<Position>();
+        moveToPool = world.GetPool<MoveTo>();
+        doorSettingsPool = world.GetPool<DoorSettings>();
+        positionPool = world.GetPool<Position>();
     }
 
     public void Run(IEcsSystems systems)

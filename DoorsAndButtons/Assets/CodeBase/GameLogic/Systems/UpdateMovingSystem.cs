@@ -8,22 +8,22 @@ using Zenject;
 public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
 {
     EcsFilter filter;
-    [Inject] EcsPool<MoveTo> moveToPool;
-    [Inject] EcsPool<Position> positionPool;
-    [Inject] EcsPool<MovementSpeed> speedPool;
+    EcsPool<MoveTo> moveToPool;
+    EcsPool<Position> positionPool;
+    EcsPool<MovementSpeed> speedPool;
 
-    [Inject] SharedData sharedData;
+    SharedData sharedData;
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
         filter = world.Filter<MoveTo>().Inc<Position>().Inc<MovementSpeed>().End();
 
-        //moveToPool = world.GetPool<MoveTo>();
-        //positionPool = world.GetPool<Position>();
-        //speedPool = world.GetPool<MovementSpeed>();
+        moveToPool = world.GetPool<MoveTo>();
+        positionPool = world.GetPool<Position>();
+        speedPool = world.GetPool<MovementSpeed>();
 
-        //sharedData = systems.GetShared<SharedData>();
+        sharedData = systems.GetShared<SharedData>();
     }
 
     public void Run(IEcsSystems systems)

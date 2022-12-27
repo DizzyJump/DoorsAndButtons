@@ -10,8 +10,8 @@ public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter listenersFilter;
     EcsFilter requestsFilter;
 
-    [Inject] EcsPool<MovementRequest> requestsPool;
-    [Inject] EcsPool<MoveTo> moveToPool;
+    EcsPool<MovementRequest> requestsPool;
+    EcsPool<MoveTo> moveToPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -19,8 +19,9 @@ public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
 
         listenersFilter = world.Filter<InputListener>().End();
         requestsFilter = world.Filter<MovementRequest>().End();
-        //requestsPool = world.GetPool<MovementRequest>();
-        //moveToPool = world.GetPool<MoveTo>();
+        
+        requestsPool = world.GetPool<MovementRequest>();
+        moveToPool = world.GetPool<MoveTo>();
     }
 
     public void Run(IEcsSystems systems)

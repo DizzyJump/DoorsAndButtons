@@ -12,9 +12,9 @@ public class FindButtonLinkByIdSystem : IEcsInitSystem, IEcsRunSystem
     EcsFilter requestsFilter;
     EcsFilter buttonsFilter;
 
-    [Inject] EcsPool<ID> IdsPool;
-    [Inject] EcsPool<ButtonLinkRequest> requestsPool;
-    [Inject] EcsPool<ButtonLink> linksPool;
+    EcsPool<ID> IdsPool;
+    EcsPool<ButtonLinkRequest> requestsPool;
+    EcsPool<ButtonLink> linksPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -23,9 +23,9 @@ public class FindButtonLinkByIdSystem : IEcsInitSystem, IEcsRunSystem
         requestsFilter = world.Filter<ButtonLinkRequest>().Exc<ButtonLink>().End();
         buttonsFilter = world.Filter<ID>().Inc<Button>().End();
 
-        //requestsPool = world.GetPool<ButtonLinkRequest>();
-        //linksPool = world.GetPool<ButtonLink>();
-        //IdsPool = world.GetPool<ID>();
+        requestsPool = world.GetPool<ButtonLinkRequest>();
+        linksPool = world.GetPool<ButtonLink>();
+        IdsPool = world.GetPool<ID>();
     }
 
     public void Run(IEcsSystems systems)

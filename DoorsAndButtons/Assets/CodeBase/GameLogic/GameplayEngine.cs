@@ -4,72 +4,30 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Zenject;
 
-public class GameplayEngine
+public class GameplayEngine : IGameplayEngine
 {
     EcsWorld world;
     EcsSystems systems;
     SharedData sharedData;
-    bool server;
 
-    public GameplayEngine(bool server)
+    public GameplayEngine()
     {
         sharedData = new SharedData();
         world = new EcsWorld();
-        this.server = server;
     }
 
     [Inject]
-    public void Init(LevelConfig levelConfig,
-        UserInputRequestProcessingSystem userInputRequestProcessingSystem,
-        UpdateMovingSystem updateMovingSystem,
-        CheckButtonLeaveSystem checkButtonLeaveSystem)
+    public void Construct(LevelConfig levelConfig,
+        IEnumerable<IEcsSystem> bindedSystems)
     {
-        CreateBindingsForPools(world, container);
-        CreateBindingForSharedData(container);
-
         systems = new EcsSystems(world, sharedData);
 
-        systems
-            .Add(userInputRequestProcessingSystem)
-            .Add(updateMovingSystem)
-            .Add(checkButtonLeaveSystem)
-            .Add(container.Instantiate<CheckButtonEnterSystem>())
-            .Add(container.Instantiate<FindButtonLinkByIdSystem>())
-            .Add(container.Instantiate<UpdateDoorStateByButtonSystem>())
-            .Add(container.Instantiate<UpdateDoorMovingByDoorStateSystem>());
-
-        if(!server)
-        {
-            systems
-            #if UNITY_EDITOR
-                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
-            #endif
-                .Add(container.Instantiate<UpdateViewPositionSystem>());
-        }
+        foreach (var system in bindedSystems)
+            systems.Add(system);
 
         systems.Init();
 
-        CreateLevelFromConfig(levelConfig);
-    }
-
-    private void CreateBindingForSharedData(DiContainer container)
-    {
-        container.Bind<SharedData>().FromInstance(sharedData);
-    }
-
-    void CreateBindingsForPools(EcsWorld world, DiContainer container)
-    {
-        container.Bind<EcsPool<MovementRequest>>().FromInstance(world.GetPool<MovementRequest>());
-        container.Bind<EcsPool<MoveTo>>().FromInstance(world.GetPool<MoveTo>());
-        container.Bind<EcsPool<Position>>().FromInstance(world.GetPool<Position>());
-        container.Bind<EcsPool<MovementSpeed>>().FromInstance(world.GetPool<MovementSpeed>());
-        container.Bind<EcsPool<Radius>>().FromInstance(world.GetPool<Radius>());
-        container.Bind<EcsPool<Activated>>().FromInstance(world.GetPool<Activated>());
-        container.Bind<EcsPool<ID>>().FromInstance(world.GetPool<ID>());
-        container.Bind<EcsPool<ButtonLinkRequest>>().FromInstance(world.GetPool<ButtonLinkRequest>());
-        container.Bind<EcsPool<ButtonLink>>().FromInstance(world.GetPool<ButtonLink>());
-        container.Bind<EcsPool<DoorSettings>>().FromInstance(world.GetPool<DoorSettings>());
-        container.Bind<EcsPool<View>>().FromInstance(world.GetPool<View>());
+        //CreateLevelFromConfig(levelConfig);
     }
 
     public void Update(float dt)

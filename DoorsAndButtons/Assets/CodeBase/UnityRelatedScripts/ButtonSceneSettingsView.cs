@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Interfaces;
 using UnityEngine;
 
-public class ButtonSceneSettingsView : MonoBehaviour
+namespace CodeBase.UnityRelatedScripts
 {
-    public int ID;
-    public Vector3 Position => transform.position;
-    public float Radius;
-    public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();
-
-    private void OnDrawGizmosSelected()
+    public class ButtonSceneSettingsView : MonoBehaviour
     {
-        Gizmos.matrix = Matrix4x4.identity;
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(Position, Radius);
+        public int ID;
+        public Vector3 Position => transform.position;
+        public float Radius;
+        public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.matrix = Matrix4x4.identity;
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(Position, Radius);
+        }
     }
 }

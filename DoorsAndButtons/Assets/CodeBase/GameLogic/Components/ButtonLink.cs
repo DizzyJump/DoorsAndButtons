@@ -1,9 +1,10 @@
-using Leopotam.EcsLite;
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.LeoEcs;
 
 // Store link to button. Add ButtonLinkRequest component to entity if you want to receive this link. It's resolve automaticaly.
-public struct ButtonLink
+namespace CodeBase.GameLogic.Components
 {
-    public EcsPackedEntity Value;
+    public struct ButtonLink
+    {
+        public EcsPackedEntity Value;
+    }
 }

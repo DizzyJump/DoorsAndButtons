@@ -9,8 +9,9 @@ namespace CodeBase.Infrastructure.States
         {
             Container.BindFactory<IGameStateMachine, BootstrapState, BootstrapState.Factory>();
             Container.BindFactory<IGameStateMachine, LoadLevelState, LoadLevelState.Factory>();
+            Container.BindFactory<IGameStateMachine, GameLoopState, GameLoopState.Factory>();
 
-            Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
+            Container.Bind(typeof(IGameStateMachine), typeof(ITickable)).To<GameStateMachine>().AsSingle();
         }
     }
 }

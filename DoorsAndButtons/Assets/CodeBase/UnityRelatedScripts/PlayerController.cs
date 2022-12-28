@@ -1,39 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class PlayerController : MonoBehaviour
+namespace CodeBase.UnityRelatedScripts
 {
-    [SerializeField] AnimatorController idleAnimation;
-    [SerializeField] AnimatorController walkAnimation;
-
-    Animator animator;
-    Vector3 prevPosition;
-
-    // Start is called before the first frame update
-    void Awake()
+    [RequireComponent(typeof(Animator))]
+    public class PlayerController : MonoBehaviour
     {
-        animator = GetComponent<Animator>();
-    }
+        [SerializeField] AnimatorController idleAnimation;
+        [SerializeField] AnimatorController walkAnimation;
 
-    // Update is called once per frame
-    void Update()
-    {
-        var currentPosition = transform.position;
-        var direction = currentPosition - prevPosition;
-        transform.LookAt(transform.position + direction, Vector3.up);
-        if (direction.sqrMagnitude > float.Epsilon)
+        Animator animator;
+        Vector3 prevPosition;
+
+        // Start is called before the first frame update
+        void Awake()
         {
-            if (animator.runtimeAnimatorController != walkAnimation)
-                animator.runtimeAnimatorController = walkAnimation;
+            animator = GetComponent<Animator>();
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            if (animator.runtimeAnimatorController != idleAnimation)
-                animator.runtimeAnimatorController = idleAnimation;
+            var currentPosition = transform.position;
+            var direction = currentPosition - prevPosition;
+            transform.LookAt(transform.position + direction, Vector3.up);
+            if (direction.sqrMagnitude > float.Epsilon)
+            {
+                if (animator.runtimeAnimatorController != walkAnimation)
+                    animator.runtimeAnimatorController = walkAnimation;
+            }
+            else
+            {
+                if (animator.runtimeAnimatorController != idleAnimation)
+                    animator.runtimeAnimatorController = idleAnimation;
+            }
+            prevPosition = currentPosition;
         }
-        prevPosition = currentPosition;
     }
 }

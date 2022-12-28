@@ -1,64 +1,65 @@
-using Leopotam.EcsLite;
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
-using Zenject;
 
 // System update MoveTo component on Doors according to they activity state
-public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
+namespace CodeBase.GameLogic.Systems
 {
-EcsWorld world;
-
-    EcsFilter activatedDoorsFilter;
-    EcsFilter deactivatedDoorsFilter;
-
-    EcsPool<MoveTo> moveToPool;
-    EcsPool<Position> positionPool;
-    EcsPool<DoorSettings> doorSettingsPool;
-
-    public void Init(IEcsSystems systems)
+    public class UpdateDoorMovingByDoorStateSystem : IEcsInitSystem, IEcsRunSystem
     {
-        world = systems.GetWorld();
+        EcsWorld world;
 
-        activatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Inc<Activated>().End();
-        deactivatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Exc<Activated>().End();
+        EcsFilter activatedDoorsFilter;
+        EcsFilter deactivatedDoorsFilter;
 
-        moveToPool = world.GetPool<MoveTo>();
-        doorSettingsPool = world.GetPool<DoorSettings>();
-        positionPool = world.GetPool<Position>();
-    }
+        EcsPool<MoveTo> moveToPool;
+        EcsPool<Position> positionPool;
+        EcsPool<DoorSettings> doorSettingsPool;
 
-    public void Run(IEcsSystems systems)
-    {
-        foreach(var door in activatedDoorsFilter)
+        public void Init(IEcsSystems systems)
         {
-            var targetPosition = doorSettingsPool.Get(door).OpenPosition;
-            SetMoveTo(targetPosition, door);
+            world = systems.GetWorld();
+
+            activatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Inc<Activated>().End();
+            deactivatedDoorsFilter = world.Filter<Door>().Inc<DoorSettings>().Inc<Position>().Exc<Activated>().End();
+
+            moveToPool = world.GetPool<MoveTo>();
+            doorSettingsPool = world.GetPool<DoorSettings>();
+            positionPool = world.GetPool<Position>();
         }
 
-        foreach (var door in deactivatedDoorsFilter)
+        public void Run(IEcsSystems systems)
         {
-            var targetPosition = doorSettingsPool.Get(door).ClosedPosition;
-            SetMoveTo(targetPosition, door);
-        }
-    }
+            foreach(var door in activatedDoorsFilter)
+            {
+                var targetPosition = doorSettingsPool.Get(door).OpenPosition;
+                SetMoveTo(targetPosition, door);
+            }
 
-    void SetMoveTo(float3 targetPosition, int door)
-    {
-        var currentPosition = positionPool.Get(door).Value;
-        bool isCorrectPosition = math.lengthsq(targetPosition - currentPosition) <= float.Epsilon;
-        if (isCorrectPosition)
-            return;
-
-        if (moveToPool.Has(door))
-        {
-            ref var moveTo = ref moveToPool.Get(door);
-            moveTo.Value = targetPosition;
+            foreach (var door in deactivatedDoorsFilter)
+            {
+                var targetPosition = doorSettingsPool.Get(door).ClosedPosition;
+                SetMoveTo(targetPosition, door);
+            }
         }
-        else
+
+        void SetMoveTo(float3 targetPosition, int door)
         {
-            ref var moveTo = ref moveToPool.Add(door);
-            moveTo.Value = targetPosition;
+            var currentPosition = positionPool.Get(door).Value;
+            bool isCorrectPosition = math.lengthsq(targetPosition - currentPosition) <= float.Epsilon;
+            if (isCorrectPosition)
+                return;
+
+            if (moveToPool.Has(door))
+            {
+                ref var moveTo = ref moveToPool.Get(door);
+                moveTo.Value = targetPosition;
+            }
+            else
+            {
+                ref var moveTo = ref moveToPool.Add(door);
+                moveTo.Value = targetPosition;
+            }
         }
     }
 }

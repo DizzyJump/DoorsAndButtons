@@ -10,7 +10,7 @@ using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 
-namespace Leopotam.EcsLite.UnityEditor.Templates {
+namespace CodeBase.UnityRelatedScripts.LeoEcsEditor.Editor.Templates {
     sealed class TemplateGenerator : ScriptableObject {
         const string Title = "LeoECS Lite template generator";
 

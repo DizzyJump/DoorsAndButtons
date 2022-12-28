@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 
 // Store door settings
-public struct DoorSettings 
+namespace CodeBase.GameLogic.Components
 {
-    public float3 OpenPosition;
-    public float3 ClosedPosition;
+    public struct DoorSettings 
+    {
+        public float3 OpenPosition;
+        public float3 ClosedPosition;
+    }
 }

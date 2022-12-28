@@ -104,7 +104,6 @@
      <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\SceneLoader.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\LoadingCurtain.cs" />
-     <Compile Include="Assets\CodeBase\UnityRelatedScripts\DebugTest1.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\Components\DoorSettings.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ICoroutineRunner.cs" />
@@ -135,7 +134,6 @@
      <Compile Include="Assets\CodeBase\GameLogic\Components\InputListener.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Runtime\EcsWorldDebugSystem.cs" />
-     <Compile Include="Assets\CodeBase\UnityRelatedScripts\tmp.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\SceneObjectView.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\PlayerSceneSettingsView.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
@@ -159,6 +157,16 @@
      <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\Components\Actor.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameLoopState.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Components\CreateLevelRequest.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Systems\CreateLevelFromConfigSystem.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Factories\CreateLevelRequestFactory.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\IInputService.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Systems\CheckUserInputSystem.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Factories\MovementRequestFactory.cs" />
+     <Compile Include="Assets\CodeBase\Services\TimeService\TimeService.cs" />
+     <Compile Include="Assets\CodeBase\Services\TimeService\ITimeService.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\IGameplayEngine.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

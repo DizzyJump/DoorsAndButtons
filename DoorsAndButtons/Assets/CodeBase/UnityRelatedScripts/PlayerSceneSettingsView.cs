@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Interfaces;
 using UnityEngine;
 
-public class PlayerSceneSettingsView : MonoBehaviour
+namespace CodeBase.UnityRelatedScripts
 {
-    public Vector3 Position => transform.position;
+    public class PlayerSceneSettingsView : MonoBehaviour
+    {
+        public Vector3 Position => transform.position;
 
-    public float MovementSpeed;
+        public float MovementSpeed;
 
-    public bool isListenInput;
+        public bool isListenInput;
 
-    public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();
+        public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();
+    }
 }

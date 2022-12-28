@@ -1,5 +1,8 @@
+using CodeBase.GameLogic;
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.InputService;
+using CodeBase.Services.TimeService;
 using Zenject;
 
 namespace CodeBase.CompositionRoot
@@ -16,10 +19,31 @@ namespace CodeBase.CompositionRoot
 
             BindLoadingCurtain();
 
-            BindGameStateMachine();
+            BindInputService();
+
+            BindTimeService();
             
+            BindGameplayEngine();
+
+            BindGameStateMachine();
         }
-        
+
+        private void BindTimeService() => 
+            Container.BindInterfacesTo<TimeService>().AsSingle();
+
+        private void BindInputService() => 
+            Container.BindInterfacesTo<InputService>().AsSingle();
+
+        private void BindGameplayEngine()
+        {
+            Container
+                .Bind<IGameplayEngine>()
+                .FromSubContainerResolve()
+                .ByInstaller<GameplayEngineInstaller>()
+                .WithKernel()
+                .AsSingle();
+        }
+
         private void BindGameBootstraperFactory()
         {
             Container
@@ -45,9 +69,10 @@ namespace CodeBase.CompositionRoot
         private void BindGameStateMachine()
         {
             Container
-                .Bind<IGameStateMachine>()
+                .Bind(typeof(IGameStateMachine), typeof(ITickable))
                 .FromSubContainerResolve()
                 .ByInstaller<GameStateMachineInstaller>()
+                .WithKernel()
                 .AsSingle();
         }
     }

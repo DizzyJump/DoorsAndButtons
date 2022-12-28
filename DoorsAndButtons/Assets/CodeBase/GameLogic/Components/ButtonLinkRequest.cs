@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 
 // Indicate that entity need link to the button entity with specified ID.
-public struct ButtonLinkRequest
+namespace CodeBase.GameLogic.Components
 {
-    public int ButtonID;
+    public struct ButtonLinkRequest
+    {
+        public int ButtonID;
+    }
 }

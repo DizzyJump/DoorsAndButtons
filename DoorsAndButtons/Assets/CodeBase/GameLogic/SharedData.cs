@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-
-public class SharedData
+namespace CodeBase.GameLogic
 {
-    public float deltaTime;
+    public class SharedData
+    {
+        public float deltaTime;
+    }
 }

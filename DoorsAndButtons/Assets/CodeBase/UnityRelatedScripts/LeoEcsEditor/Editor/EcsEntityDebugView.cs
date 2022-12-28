@@ -6,13 +6,15 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using CodeBase.GameLogic.LeoEcs;
+using CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Leopotam.EcsLite.UnityEditor {
+namespace CodeBase.UnityRelatedScripts.LeoEcsEditor.Editor {
     [CustomEditor (typeof (EcsEntityDebugView))]
-    sealed class EcsEntityDebugViewInspector : Editor {
+    sealed class EcsEntityDebugViewInspector : UnityEditor.Editor {
         const int MaxFieldToStringLength = 128;
 
         static object[] _componentsCache = new object[32];

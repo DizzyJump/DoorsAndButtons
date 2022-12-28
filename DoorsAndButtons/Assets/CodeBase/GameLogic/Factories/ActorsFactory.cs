@@ -1,49 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
-using Leopotam.EcsLite;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Configs;
+using CodeBase.GameLogic.Interfaces;
+using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
-public class ActorsFactory
+namespace CodeBase.GameLogic.Factories
 {
-    public static int CreateActor(EcsWorld world, LevelConfig.Actor actorConfig)
+    public class ActorsFactory
     {
-        return CreateActor(world, 
-            actorConfig.Position,
-            actorConfig.MovementSpeed,
-            actorConfig.ListenInput, 
-            actorConfig.View);
-    }
-
-    public static int CreateActor(EcsWorld world, float3 position, float speed, bool inputListener, ISceneObjectView view)
-    {
-        var entity = world.NewEntity();
-
-        var actorsPool = world.GetPool<Actor>();
-        var positionPool = world.GetPool<Position>();
-        var movementSpeedPool = world.GetPool<MovementSpeed>();
-        var inputListenersPool = world.GetPool<InputListener>();
-        var viewsPool = world.GetPool<View>();
-        var buttonInteractionPool = world.GetPool<CanInteractWithButtons>();
-
-        actorsPool.Add(entity);
-
-        ref var positionComponent = ref positionPool.Add(entity);
-        positionComponent.Value = position;
-
-        ref var speedComponent = ref movementSpeedPool.Add(entity);
-        speedComponent.Value = speed;
-
-        if(inputListener)
-            inputListenersPool.Add(entity);
-
-        if(view!=null)
+        public static int Create(EcsWorld world, LevelConfig.Actor actorConfig)
         {
-            ref var viewComponent = ref viewsPool.Add(entity);
-            viewComponent.Value = view;
+            return Create(world, 
+                actorConfig.Position,
+                actorConfig.MovementSpeed,
+                actorConfig.ListenInput, 
+                actorConfig.View);
         }
 
-        buttonInteractionPool.Add(entity);
+        public static int Create(EcsWorld world, float3 position, float speed, bool inputListener, ISceneObjectView view)
+        {
+            var entity = world.NewEntity();
 
-        return entity;
+            var actorsPool = world.GetPool<Actor>();
+            var positionPool = world.GetPool<Position>();
+            var movementSpeedPool = world.GetPool<MovementSpeed>();
+            var inputListenersPool = world.GetPool<InputListener>();
+            var viewsPool = world.GetPool<View>();
+            var buttonInteractionPool = world.GetPool<CanInteractWithButtons>();
+
+            actorsPool.Add(entity);
+
+            ref var positionComponent = ref positionPool.Add(entity);
+            positionComponent.Value = position;
+
+            ref var speedComponent = ref movementSpeedPool.Add(entity);
+            speedComponent.Value = speed;
+
+            if(inputListener)
+                inputListenersPool.Add(entity);
+
+            if(view!=null)
+            {
+                ref var viewComponent = ref viewsPool.Add(entity);
+                viewComponent.Value = view;
+            }
+
+            buttonInteractionPool.Add(entity);
+
+            return entity;
+        }
     }
 }

@@ -1,52 +1,58 @@
-using Leopotam.EcsLite;
-using UnityEngine;
+using CodeBase.GameLogic.LeoEcs;
+using CodeBase.GameLogic.Systems;
+using CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime;
 using Zenject;
 
-public class GameplayEngineInstaller : Installer<GameplayEngineInstaller>
+namespace CodeBase.GameLogic
 {
-    public override void InstallBindings()
+    public class GameplayEngineInstaller : Installer<GameplayEngineInstaller>
     {
-        BindEcsSystems();
+        public override void InstallBindings()
+        {
+            BindEcsSystems();
         
-        Container.Bind<GameplayEngine>().AsTransient();
-    }
+            Container.Bind<IGameplayEngine>().To<GameplayEngine>().AsSingle();
+        }
 
-    private void BindEcsSystems()
-    {
-        BindCommonSystems();
+        private void BindEcsSystems()
+        {
+            BindCommonSystems();
         
-        #if !SERVER_BUILD
-        BindClientSystems();
-        #endif
+#if !SERVER_BUILD
+            BindClientSystems();
+#endif
         
-        #if UNITY_EDITOR
-        BindDebugSystems();
-        #endif
-    }
+#if UNITY_EDITOR
+            BindDebugSystems();
+#endif
+        }
 
-    private void BindDebugSystems()
-    {
-        BindSystem<Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem>();
-    }
+        private void BindDebugSystems()
+        {
+            BindSystem<EcsWorldDebugSystem>();
+        }
 
-    private void BindClientSystems()
-    {
-        BindSystem<UpdateViewPositionSystem>();
-    }
+        private void BindClientSystems()
+        {
+            BindSystem<UpdateViewPositionSystem>();
+        }
 
-    private void BindCommonSystems()
-    {
-        BindSystem<CheckButtonEnterSystem>();
-        BindSystem<CheckButtonLeaveSystem>();
-        BindSystem<FindButtonLinkByIdSystem>();
-        BindSystem<UpdateDoorMovingByDoorStateSystem>();
-        BindSystem<UpdateDoorStateByButtonSystem>();
-        BindSystem<UpdateMovingSystem>();
-        BindSystem<UserInputRequestProcessingSystem>();
-    }
+        private void BindCommonSystems()
+        {
+            BindSystem<CheckButtonEnterSystem>();
+            BindSystem<CheckButtonLeaveSystem>();
+            BindSystem<FindButtonLinkByIdSystem>();
+            BindSystem<UpdateDoorMovingByDoorStateSystem>();
+            BindSystem<UpdateDoorStateByButtonSystem>();
+            BindSystem<UpdateMovingSystem>();
+            BindSystem<UserInputRequestProcessingSystem>();
+            BindSystem<CreateLevelFromConfigSystem>();
+            BindSystem<CheckUserInputSystem>();
+        }
 
-    void BindSystem<TSystem>() where TSystem : IEcsSystem
-    {
-        Container.Bind<IEcsSystem>().To<TSystem>().AsTransient();
+        void BindSystem<TSystem>() where TSystem : IEcsSystem
+        {
+            Container.Bind<IEcsSystem>().To<TSystem>().AsTransient();
+        }
     }
 }

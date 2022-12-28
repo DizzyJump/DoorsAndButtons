@@ -1,76 +1,78 @@
-using Leopotam.EcsLite;
 using System.Collections;
 using System.Collections.Generic;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Configs;
+using CodeBase.GameLogic.Factories;
+using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 using Zenject;
 
-public class GameplayEngine : IGameplayEngine
+namespace CodeBase.GameLogic
 {
-    EcsWorld world;
-    EcsSystems systems;
-    SharedData sharedData;
-
-    public GameplayEngine()
+    public class GameplayEngine : IGameplayEngine
     {
-        sharedData = new SharedData();
-        world = new EcsWorld();
-    }
+        private EcsWorld world;
+        private EcsSystems systems;
+        private IEnumerable<IEcsSystem> bindedSystems;
+        private LevelConfig levelConfig;
 
-    [Inject]
-    public void Construct(LevelConfig levelConfig,
-        IEnumerable<IEcsSystem> bindedSystems)
-    {
-        systems = new EcsSystems(world, sharedData);
-
-        foreach (var system in bindedSystems)
-            systems.Add(system);
-
-        systems.Init();
-
-        //CreateLevelFromConfig(levelConfig);
-    }
-
-    public void Update(float dt)
-    {
-        sharedData.deltaTime = dt;
-        systems?.Run();
-    }
-
-    public void SetInput(float3 userChoosePosition)
-    {
-        if(world!=null)
+        public GameplayEngine(IEnumerable<IEcsSystem> bindedSystems)
         {
-            var requestEntity = world.NewEntity();
-            var pool = world.GetPool<MovementRequest>();
-            ref var request = ref pool.Add(requestEntity);
-            request.Value = userChoosePosition;
-        }
-    }
-
-    public void Shootdown()
-    {
-        if(systems != null)
-        {
-            systems.Destroy();
-            systems = null;
+            this.bindedSystems = bindedSystems;
         }
 
-        if(world != null)
+        public void InitializeLevel(LevelConfig levelConfig)
         {
-            world.Destroy();
-            world = null;
-        }    
-    }
+            Initialize();
+            CreateLevelFromConfig(levelConfig);
+        }
 
-    void CreateLevelFromConfig(LevelConfig config)
-    {
-        foreach(var actor in config.Actors)
-            ActorsFactory.CreateActor(world, actor);
+        public void Update(float dt) => 
+            systems?.Run();
 
-        foreach(var button in config.Buttons)
-            ButtonsFactory.CreateButton(world, button);
+        private void Initialize()
+        {
+            world = new EcsWorld();
+            systems = new EcsSystems(world);
 
-        foreach (var door in config.Doors)
-            DoorsFactory.CreateDoor(world, door);
+            InitializeSystems();
+        }
+
+        private void InitializeSystems()
+        {
+            foreach (var system in bindedSystems)
+                systems.Add(system);
+
+            systems.Init();
+        }
+
+        public void SetInput(float3 userChoosePosition)
+        {
+            if(world!=null)
+            {
+                var requestEntity = world.NewEntity();
+                var pool = world.GetPool<MovementRequest>();
+                ref var request = ref pool.Add(requestEntity);
+                request.Value = userChoosePosition;
+            }
+        }
+
+        public void Cleanup()
+        {
+            if(systems != null)
+            {
+                systems.Destroy();
+                systems = null;
+            }
+
+            if(world != null)
+            {
+                world.Destroy();
+                world = null;
+            }    
+        }
+
+        void CreateLevelFromConfig(LevelConfig config) => 
+            CreateLevelRequestFactory.Create(world, config);
     }
 }

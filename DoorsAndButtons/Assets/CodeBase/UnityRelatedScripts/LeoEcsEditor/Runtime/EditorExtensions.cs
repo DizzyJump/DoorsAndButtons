@@ -5,9 +5,10 @@
 
 #if UNITY_EDITOR
 using System;
+using CodeBase.GameLogic.LeoEcs;
 using UnityEngine;
 
-namespace Leopotam.EcsLite.UnityEditor {
+namespace CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime {
     public static class EditorExtensions {
         public static string GetCleanGenericTypeName (Type type) {
             if (!type.IsGenericType) {

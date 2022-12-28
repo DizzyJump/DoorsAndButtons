@@ -5,10 +5,11 @@
 
 using System;
 using System.Collections.Generic;
+using CodeBase.GameLogic.LeoEcs;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Leopotam.EcsLite.UnityEditor {
+namespace CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime {
     public sealed class EcsWorldDebugSystem : IEcsPreInitSystem, IEcsRunSystem, IEcsWorldEventListener {
         readonly string _worldName;
         readonly GameObject _rootGo;

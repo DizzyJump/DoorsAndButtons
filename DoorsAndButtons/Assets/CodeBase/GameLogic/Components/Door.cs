@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 
 // Indicate that entity is Door
-public struct Door
+namespace CodeBase.GameLogic.Components
 {
-    public int ID;
+    public struct Door
+    {
+        public int ID;
+    }
 }

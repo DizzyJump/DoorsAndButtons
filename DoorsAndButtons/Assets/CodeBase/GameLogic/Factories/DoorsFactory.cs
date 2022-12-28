@@ -1,48 +1,51 @@
-using Leopotam.EcsLite;
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Configs;
+using CodeBase.GameLogic.Interfaces;
+using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
-public class DoorsFactory
+namespace CodeBase.GameLogic.Factories
 {
-    public static int CreateDoor(EcsWorld world, LevelConfig.DoorConfig config)
+    public class DoorsFactory
     {
-        return CreateDoor(world, config.OpenPosition, config.ClosedPosition, config.MovingSpeed, config.ButtonId, config.View);
-    }
-
-    public static int CreateDoor(EcsWorld world, float3 openPosition, float3 closedPosition, float speed, int button, ISceneObjectView view)
-    {
-        var entity = world.NewEntity();
-
-        var doorsPool = world.GetPool<Door>();
-        var buttonPool = world.GetPool<ButtonLinkRequest>();
-        var positionPool = world.GetPool<Position>();
-        var movementSpeedPool = world.GetPool<MovementSpeed>();
-        var doorSettingsPool = world.GetPool<DoorSettings>();
-        var viewsPool = world.GetPool<View>();
-
-        doorsPool.Add(entity);
-
-        ref var buttonIdComponent = ref buttonPool.Add(entity);
-        buttonIdComponent.ButtonID = button;
-
-
-        ref var positionComponent = ref positionPool.Add(entity);
-        positionComponent.Value = closedPosition;
-
-        ref var speedComponent = ref movementSpeedPool.Add(entity);
-        speedComponent.Value = speed;
-
-        ref var doorSettings = ref doorSettingsPool.Add(entity);
-        doorSettings.ClosedPosition = closedPosition;
-        doorSettings.OpenPosition = openPosition;
-
-        if (view != null)
+        public static int Create(EcsWorld world, LevelConfig.DoorConfig config)
         {
-            ref var viewComponent = ref viewsPool.Add(entity);
-            viewComponent.Value = view;
+            return Create(world, config.OpenPosition, config.ClosedPosition, config.MovingSpeed, config.ButtonId, config.View);
         }
 
-        return entity;
+        public static int Create(EcsWorld world, float3 openPosition, float3 closedPosition, float speed, int button, ISceneObjectView view)
+        {
+            var entity = world.NewEntity();
+
+            var doorsPool = world.GetPool<Door>();
+            var buttonPool = world.GetPool<ButtonLinkRequest>();
+            var positionPool = world.GetPool<Position>();
+            var movementSpeedPool = world.GetPool<MovementSpeed>();
+            var doorSettingsPool = world.GetPool<DoorSettings>();
+            var viewsPool = world.GetPool<View>();
+
+            doorsPool.Add(entity);
+
+            ref var buttonIdComponent = ref buttonPool.Add(entity);
+            buttonIdComponent.ButtonID = button;
+
+            ref var positionComponent = ref positionPool.Add(entity);
+            positionComponent.Value = closedPosition;
+
+            ref var speedComponent = ref movementSpeedPool.Add(entity);
+            speedComponent.Value = speed;
+
+            ref var doorSettings = ref doorSettingsPool.Add(entity);
+            doorSettings.ClosedPosition = closedPosition;
+            doorSettings.OpenPosition = openPosition;
+
+            if (view != null)
+            {
+                ref var viewComponent = ref viewsPool.Add(entity);
+                viewComponent.Value = view;
+            }
+
+            return entity;
+        }
     }
 }

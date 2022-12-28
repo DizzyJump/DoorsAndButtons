@@ -3,10 +3,12 @@
 // Copyright (c) 2012-2022 Leopotam <leopotam@yandex.ru>
 // ----------------------------------------------------------------------------
 
+using CodeBase.GameLogic.LeoEcs;
+using CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace Leopotam.EcsLite.UnityEditor.Inspectors {
+namespace CodeBase.UnityRelatedScripts.LeoEcsEditor.Editor.Inspectors.Ecs {
     sealed class EcsPackedEntityWithWorldInspector : EcsComponentInspectorTyped<EcsPackedEntityWithWorld> {
         public override bool OnGuiTyped (string label, ref EcsPackedEntityWithWorld value, EcsEntityDebugView entityView) {
             EditorGUILayout.BeginHorizontal ();

@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 
-public interface ISceneObjectView
+namespace CodeBase.GameLogic.Interfaces
 {
-    void UpdatePosition(float3 position);
-    void DestroyView();
+    public interface ISceneObjectView
+    {
+        void UpdatePosition(float3 position);
+        void DestroyView();
+    }
 }

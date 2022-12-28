@@ -1,48 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
-using Leopotam.EcsLite;
-using Zenject;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.LeoEcs;
 
 // System collect user input requests and update MoveTo component
 // on entities marked by InputListener components according this requests.
-public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
+namespace CodeBase.GameLogic.Systems
 {
-    EcsFilter listenersFilter;
-    EcsFilter requestsFilter;
-
-    EcsPool<MovementRequest> requestsPool;
-    EcsPool<MoveTo> moveToPool;
-
-    public void Init(IEcsSystems systems)
+    public class UserInputRequestProcessingSystem : IEcsInitSystem, IEcsRunSystem
     {
-        var world = systems.GetWorld();
+        EcsFilter listenersFilter;
+        EcsFilter requestsFilter;
 
-        listenersFilter = world.Filter<InputListener>().End();
-        requestsFilter = world.Filter<MovementRequest>().End();
-        
-        requestsPool = world.GetPool<MovementRequest>();
-        moveToPool = world.GetPool<MoveTo>();
-    }
+        EcsPool<MovementRequest> requestsPool;
+        EcsPool<MoveTo> moveToPool;
 
-    public void Run(IEcsSystems systems)
-    {
-        foreach(var requst in requestsFilter)
+        public void Init(IEcsSystems systems)
         {
-            var moveToPosition = requestsPool.Get(requst).Value;
-            foreach(var listener in listenersFilter)
+            var world = systems.GetWorld();
+
+            listenersFilter = world.Filter<InputListener>().End();
+            requestsFilter = world.Filter<MovementRequest>().End();
+        
+            requestsPool = world.GetPool<MovementRequest>();
+            moveToPool = world.GetPool<MoveTo>();
+        }
+
+        public void Run(IEcsSystems systems)
+        {
+            foreach(var requst in requestsFilter)
             {
-                if(moveToPool.Has(listener))
+                var moveToPosition = requestsPool.Get(requst).Value;
+                foreach(var listener in listenersFilter)
                 {
-                    ref var moveTo = ref moveToPool.Get(listener);
-                    moveTo.Value = moveToPosition;
+                    if(moveToPool.Has(listener))
+                    {
+                        ref var moveTo = ref moveToPool.Get(listener);
+                        moveTo.Value = moveToPosition;
+                    }
+                    else
+                    {
+                        ref var moveTo = ref moveToPool.Add(listener);
+                        moveTo.Value = moveToPosition;
+                    }
                 }
-                else
-                {
-                    ref var moveTo = ref moveToPool.Add(listener);
-                    moveTo.Value = moveToPosition;
-                }
+                requestsPool.Del(requst);
             }
-            requestsPool.Del(requst);
         }
     }
 }

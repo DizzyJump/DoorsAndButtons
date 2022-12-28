@@ -1,44 +1,51 @@
-using Leopotam.EcsLite;
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Helpers;
+using CodeBase.GameLogic.LeoEcs;
+using CodeBase.Services.TimeService;
 using Unity.Mathematics;
-using Zenject;
 
 // Update Position components on entities if they have MoveTo component
-public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
+namespace CodeBase.GameLogic.Systems
 {
-    EcsFilter filter;
-    EcsPool<MoveTo> moveToPool;
-    EcsPool<Position> positionPool;
-    EcsPool<MovementSpeed> speedPool;
-
-    SharedData sharedData;
-    public void Init(IEcsSystems systems)
+    public class UpdateMovingSystem : IEcsInitSystem, IEcsRunSystem
     {
-        var world = systems.GetWorld();
+        EcsFilter filter;
+        
+        EcsPool<MoveTo> moveToPool;
+        EcsPool<Position> positionPool;
+        EcsPool<MovementSpeed> speedPool;
 
-        filter = world.Filter<MoveTo>().Inc<Position>().Inc<MovementSpeed>().End();
+        private ITimeService timeService;
 
-        moveToPool = world.GetPool<MoveTo>();
-        positionPool = world.GetPool<Position>();
-        speedPool = world.GetPool<MovementSpeed>();
+        public UpdateMovingSystem(ITimeService timeService) => 
+            this.timeService = timeService;
 
-        sharedData = systems.GetShared<SharedData>();
-    }
-
-    public void Run(IEcsSystems systems)
-    {
-        foreach(var entity in filter)
+        public void Init(IEcsSystems systems)
         {
-            var moveToPosition = moveToPool.Get(entity).Value;
-            var speed = speedPool.Get(entity).Value;
-            ref var position = ref positionPool.Get(entity);
+            var world = systems.GetWorld();
 
-            position.Value = MathHelpers.MoveTowards(position.Value, moveToPosition, speed * sharedData.deltaTime);
-            if(math.lengthsq(position.Value - moveToPosition) < float.Epsilon)
+            filter = world.Filter<MoveTo>().Inc<Position>().Inc<MovementSpeed>().End();
+
+            moveToPool = world.GetPool<MoveTo>();
+            positionPool = world.GetPool<Position>();
+            speedPool = world.GetPool<MovementSpeed>();
+        }
+
+        public void Run(IEcsSystems systems)
+        {
+            foreach(var entity in filter)
             {
-                position.Value = moveToPosition;
-                moveToPool.Del(entity);
+                var moveToPosition = moveToPool.Get(entity).Value;
+                var speed = speedPool.Get(entity).Value;
+                ref var position = ref positionPool.Get(entity);
+
+                position.Value = MathHelpers.MoveTowards(position.Value, moveToPosition, speed * timeService.DeltaTime);
+                
+                if(math.lengthsq(position.Value - moveToPosition) < float.Epsilon)
+                {
+                    position.Value = moveToPosition;
+                    moveToPool.Del(entity);
+                }
             }
         }
     }

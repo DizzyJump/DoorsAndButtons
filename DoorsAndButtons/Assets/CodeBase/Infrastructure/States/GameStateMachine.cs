@@ -1,21 +1,25 @@
 using System;
 using System.Collections.Generic;
+using Zenject;
 
 namespace CodeBase.Infrastructure.States
 {
-    public class GameStateMachine : IGameStateMachine
+    public class GameStateMachine : IGameStateMachine, ITickable
     {
         private Dictionary<System.Type, IExitableState> registeredStates;
         private IExitableState currentState;
+        private ITickable currentTickableState;
 
         public GameStateMachine(
             BootstrapState.Factory bootstrapStateFactory,
-            LoadLevelState.Factory loadLevelStateFactory)
+            LoadLevelState.Factory loadLevelStateFactory,
+            GameLoopState.Factory gameLoopStateFactory)
         {
             registeredStates = new Dictionary<Type, IExitableState>();
             
             RegisterState(bootstrapStateFactory.Create(this));
             RegisterState(loadLevelStateFactory.Create(this));
+            RegisterState(gameLoopStateFactory.Create(this));
         }
         
         public void Enter<TState>() where TState : class, IState
@@ -39,11 +43,17 @@ namespace CodeBase.Infrastructure.States
       
             TState state = GetState<TState>();
             currentState = state;
+            currentTickableState = currentState as ITickable;
       
             return state;
         }
     
         private TState GetState<TState>() where TState : class, IExitableState => 
             registeredStates[typeof(TState)] as TState;
+
+        public void Tick()
+        {
+            currentTickableState?.Tick();
+        }
     }
 }

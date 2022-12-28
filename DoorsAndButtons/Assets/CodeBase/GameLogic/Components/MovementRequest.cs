@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 
 // Translate to ecs world information about position where user want to send controled actor
-public struct MovementRequest
+namespace CodeBase.GameLogic.Components
 {
-    public float3 Value;
+    public struct MovementRequest
+    {
+        public float3 Value;
+    }
 }

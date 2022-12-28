@@ -1,42 +1,46 @@
-using Leopotam.EcsLite;
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Configs;
+using CodeBase.GameLogic.Interfaces;
+using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
-public class ButtonsFactory
+namespace CodeBase.GameLogic.Factories
 {
-    public static int CreateButton(EcsWorld world, LevelConfig.ButtonConfig config)
+    public class ButtonsFactory
     {
-        return CreateButton(world, config.ID, config.Position, config.Radius, config.View);
-    }
-
-    public static int CreateButton(EcsWorld world, int id, float3 position, float radius, ISceneObjectView view)
-    {
-        var entity = world.NewEntity();
-
-        var buttonsPool = world.GetPool<Button>();
-        var IdsPool = world.GetPool<ID>();
-        var positionPool = world.GetPool<Position>();
-        var radiusPool = world.GetPool<Radius>();
-        var viewsPool = world.GetPool<View>();
-
-        buttonsPool.Add(entity);
-
-        ref var IdComponent = ref IdsPool.Add(entity);
-        IdComponent.Value = id;
-
-        ref var positionComponent = ref positionPool.Add(entity);
-        positionComponent.Value = position;
-
-        ref var radiusComponent = ref radiusPool.Add(entity);
-        radiusComponent.Value = radius;
-
-        if (view != null)
+        public static int Create(EcsWorld world, LevelConfig.ButtonConfig config)
         {
-            ref var viewComponent = ref viewsPool.Add(entity);
-            viewComponent.Value = view;
+            return Create(world, config.ID, config.Position, config.Radius, config.View);
         }
 
-        return entity;
+        public static int Create(EcsWorld world, int id, float3 position, float radius, ISceneObjectView view)
+        {
+            var entity = world.NewEntity();
+
+            var buttonsPool = world.GetPool<Button>();
+            var IdsPool = world.GetPool<ID>();
+            var positionPool = world.GetPool<Position>();
+            var radiusPool = world.GetPool<Radius>();
+            var viewsPool = world.GetPool<View>();
+
+            buttonsPool.Add(entity);
+
+            ref var IdComponent = ref IdsPool.Add(entity);
+            IdComponent.Value = id;
+
+            ref var positionComponent = ref positionPool.Add(entity);
+            positionComponent.Value = position;
+
+            ref var radiusComponent = ref radiusPool.Add(entity);
+            radiusComponent.Value = radius;
+
+            if (view != null)
+            {
+                ref var viewComponent = ref viewsPool.Add(entity);
+                viewComponent.Value = view;
+            }
+
+            return entity;
+        }
     }
 }

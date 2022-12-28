@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 
 // Indicate that entity is button and has ID.
-public struct Button
+namespace CodeBase.GameLogic.Components
 {
-    public int ID;
+    public struct Button
+    {
+        public int ID;
+    }
 }

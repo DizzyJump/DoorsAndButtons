@@ -1,17 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using CodeBase.GameLogic.Interfaces;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class SceneObjectView : MonoBehaviour, ISceneObjectView
+namespace CodeBase.UnityRelatedScripts
 {
-    public void DestroyView()
+    public class SceneObjectView : MonoBehaviour, ISceneObjectView
     {
-        Destroy(gameObject);
-    }
+        public void DestroyView()
+        {
+            Destroy(gameObject);
+        }
 
-    public void UpdatePosition(float3 position)
-    {
-        transform.position = position;
+        public void UpdatePosition(float3 position)
+        {
+            transform.position = position;
+        }
     }
 }

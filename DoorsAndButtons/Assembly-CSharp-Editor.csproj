@@ -108,6 +108,7 @@
      <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
      <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
      <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
+     <Compile Include="Assets\CodeBase\Editor\UniqueIdEditor.cs" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\RunSystem.cs.txt" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\InitSystem.cs.txt" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\Component.cs.txt" />

@@ -27,31 +27,38 @@ namespace CodeBase.GameLogic.Systems
 
         public void Run(IEcsSystems systems)
         {
-            foreach(var door in activatedDoorsFilter)
-            {
-                var link = linksPool.Get(door).Value;
-                int buttonEntity;
-                if (link.Unpack(world, out buttonEntity))
-                {
-                    bool isButtonActivated = activatedPool.Has(buttonEntity);
-                    // if button is not activated then deactivate door too
-                    if (!isButtonActivated)
-                        activatedPool.Del(door);
-                }
-                else
-                    linksPool.Del(door); // brocken link - try to refresh
-            }
+            CheckActivatedDoors();
+            CheckDeactivatedDoors();
+        }
 
+        private void CheckDeactivatedDoors()
+        {
             foreach (var door in deactivatedDoorsFilter)
             {
                 var link = linksPool.Get(door).Value;
-                int buttonEntity;
-                if (link.Unpack(world, out buttonEntity))
+                if (link.Unpack(world, out var buttonEntity))
                 {
                     bool isButtonActivated = activatedPool.Has(buttonEntity);
                     // if button is activated then activate door too
                     if (isButtonActivated)
                         activatedPool.Add(door);
+                }
+                else
+                    linksPool.Del(door); // brocken link - try to refresh
+            }
+        }
+
+        private void CheckActivatedDoors()
+        {
+            foreach (var door in activatedDoorsFilter)
+            {
+                var link = linksPool.Get(door).Value;
+                if (link.Unpack(world, out var buttonEntity))
+                {
+                    bool isButtonActivated = activatedPool.Has(buttonEntity);
+                    // if button is not activated then deactivate door too
+                    if (!isButtonActivated)
+                        activatedPool.Del(door);
                 }
                 else
                     linksPool.Del(door); // brocken link - try to refresh

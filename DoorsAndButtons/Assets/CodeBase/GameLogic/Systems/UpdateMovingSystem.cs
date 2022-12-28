@@ -41,11 +41,16 @@ namespace CodeBase.GameLogic.Systems
 
                 position.Value = MathHelpers.MoveTowards(position.Value, moveToPosition, speed * timeService.DeltaTime);
                 
-                if(math.lengthsq(position.Value - moveToPosition) < float.Epsilon)
-                {
-                    position.Value = moveToPosition;
-                    moveToPool.Del(entity);
-                }
+                CheckIsArrive(ref position, moveToPosition, entity);
+            }
+        }
+
+        private void CheckIsArrive(ref Position position, float3 moveToPosition, int entity)
+        {
+            if (math.lengthsq(position.Value - moveToPosition) < float.Epsilon)
+            {
+                position.Value = moveToPosition;
+                moveToPool.Del(entity);
             }
         }
     }

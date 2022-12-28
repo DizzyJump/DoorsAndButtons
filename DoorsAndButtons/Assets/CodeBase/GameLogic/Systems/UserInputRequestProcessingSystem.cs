@@ -1,4 +1,5 @@
 using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Helpers;
 using CodeBase.GameLogic.LeoEcs;
 
 // System collect user input requests and update MoveTo component
@@ -31,16 +32,8 @@ namespace CodeBase.GameLogic.Systems
                 var moveToPosition = requestsPool.Get(requst).Value;
                 foreach(var listener in listenersFilter)
                 {
-                    if(moveToPool.Has(listener))
-                    {
-                        ref var moveTo = ref moveToPool.Get(listener);
-                        moveTo.Value = moveToPosition;
-                    }
-                    else
-                    {
-                        ref var moveTo = ref moveToPool.Add(listener);
-                        moveTo.Value = moveToPosition;
-                    }
+                    ref MoveTo moveTo = ref EcsHelpers.GetOrAddComponent(listener, moveToPool);
+                    moveTo.Value = moveToPosition;
                 }
                 requestsPool.Del(requst);
             }

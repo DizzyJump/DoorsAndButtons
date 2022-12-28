@@ -2,7 +2,7 @@ using CodeBase.GameLogic.Components;
 using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
-// System check are any entity with ability to interact is near enough
+// System check are ANY entity with ability to interact is near enough
 // to non active button and mark that button as active by adding Activated component
 namespace CodeBase.GameLogic.Systems
 {
@@ -30,17 +30,21 @@ namespace CodeBase.GameLogic.Systems
         public void Run(IEcsSystems systems)
         {
             foreach(var button in buttonsFilter)
-            foreach(var actor in actorsFilter)
-            {
-                var buttonPosition = positionPool.Get(button).Value;
-                var actorPosition = positionPool.Get(actor).Value;
-                var buttonRadius = radiusPool.Get(button).Value;
-                if(math.lengthsq(buttonPosition-actorPosition) <= (buttonRadius * buttonRadius))
+                foreach(var actor in actorsFilter)
                 {
-                    activatedPool.Add(button);
-                    break;
+                    var buttonPosition = positionPool.Get(button).Value;
+                    var actorPosition = positionPool.Get(actor).Value;
+                    var buttonRadius = radiusPool.Get(button).Value;
+                    
+                    if(math.lengthsq(buttonPosition-actorPosition) <= (buttonRadius * buttonRadius))
+                    {
+                        ActivateButton(button);
+                        break;
+                    }
                 }
-            }
         }
+
+        private void ActivateButton(int button) => 
+            activatedPool.Add(button);
     }
 }

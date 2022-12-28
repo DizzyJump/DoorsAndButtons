@@ -14,7 +14,9 @@ namespace CodeBase.GameLogic.Systems
         public void Init(IEcsSystems systems)
         {
             var world = systems.GetWorld();
+            
             filter = world.Filter<View>().Inc<Position>().End();
+            
             viewPools = world.GetPool<View>();
             positionPool = world.GetPool<Position>();
         }

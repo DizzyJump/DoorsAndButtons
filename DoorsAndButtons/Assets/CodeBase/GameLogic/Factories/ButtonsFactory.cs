@@ -13,7 +13,7 @@ namespace CodeBase.GameLogic.Factories
             return Create(world, config.ID, config.Position, config.Radius, config.View);
         }
 
-        public static int Create(EcsWorld world, int id, float3 position, float radius, ISceneObjectView view)
+        public static int Create(EcsWorld world, string id, float3 position, float radius, ISceneObjectView view)
         {
             var entity = world.NewEntity();
 

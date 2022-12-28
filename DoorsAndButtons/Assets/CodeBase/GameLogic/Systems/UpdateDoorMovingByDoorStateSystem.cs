@@ -1,4 +1,5 @@
 using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Helpers;
 using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
@@ -30,15 +31,24 @@ namespace CodeBase.GameLogic.Systems
 
         public void Run(IEcsSystems systems)
         {
-            foreach(var door in activatedDoorsFilter)
-            {
-                var targetPosition = doorSettingsPool.Get(door).OpenPosition;
-                SetMoveTo(targetPosition, door);
-            }
+            ProcessActivatedDoors();
+            ProcessDeactivatedDoors();
+        }
 
+        private void ProcessDeactivatedDoors()
+        {
             foreach (var door in deactivatedDoorsFilter)
             {
                 var targetPosition = doorSettingsPool.Get(door).ClosedPosition;
+                SetMoveTo(targetPosition, door);
+            }
+        }
+
+        private void ProcessActivatedDoors()
+        {
+            foreach (var door in activatedDoorsFilter)
+            {
+                var targetPosition = doorSettingsPool.Get(door).OpenPosition;
                 SetMoveTo(targetPosition, door);
             }
         }
@@ -50,16 +60,8 @@ namespace CodeBase.GameLogic.Systems
             if (isCorrectPosition)
                 return;
 
-            if (moveToPool.Has(door))
-            {
-                ref var moveTo = ref moveToPool.Get(door);
-                moveTo.Value = targetPosition;
-            }
-            else
-            {
-                ref var moveTo = ref moveToPool.Add(door);
-                moveTo.Value = targetPosition;
-            }
+            ref MoveTo moveTo = ref EcsHelpers.GetOrAddComponent(door, moveToPool);
+            moveTo.Value = targetPosition;
         }
     }
 }

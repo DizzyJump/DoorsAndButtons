@@ -34,20 +34,36 @@ namespace CodeBase.GameLogic.Systems
                 
                 CreateLevelFromConfig(config);
                 
-                requstsPool.Del(request);
+                DeleteRequest(request);
             }
         }
-        
+
+        private void DeleteRequest(int request) => 
+            requstsPool.Del(request);
+
         void CreateLevelFromConfig(LevelConfig config)
         {
-            foreach(var actor in config.Actors)
-                ActorsFactory.Create(world, actor);
+            CreateActors(config);
+            CreateButtons(config);
+            CreateDoors(config);
+        }
 
-            foreach(var button in config.Buttons)
-                ButtonsFactory.Create(world, button);
-
+        private void CreateDoors(LevelConfig config)
+        {
             foreach (var door in config.Doors)
                 DoorsFactory.Create(world, door);
+        }
+
+        private void CreateButtons(LevelConfig config)
+        {
+            foreach (var button in config.Buttons)
+                ButtonsFactory.Create(world, button);
+        }
+
+        private void CreateActors(LevelConfig config)
+        {
+            foreach (var actor in config.Actors)
+                ActorsFactory.Create(world, actor);
         }
     }
 }

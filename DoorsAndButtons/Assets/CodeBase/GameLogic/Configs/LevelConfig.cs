@@ -11,13 +11,13 @@ namespace CodeBase.GameLogic.Configs
             public float3 OpenPosition;
             public float3 ClosedPosition;
             public float MovingSpeed;
-            public int ButtonId;
+            public string ButtonId;
             public ISceneObjectView View; // can be null
         }
 
         public class ButtonConfig
         {
-            public int ID;
+            public string ID;
             public float3 Position;
             public float Radius;
             public ISceneObjectView View; // can be null

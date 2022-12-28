@@ -5,6 +5,6 @@ namespace CodeBase.GameLogic.Components
 {
     public struct ButtonLinkRequest
     {
-        public int ButtonID;
+        public string ButtonID;
     }
 }

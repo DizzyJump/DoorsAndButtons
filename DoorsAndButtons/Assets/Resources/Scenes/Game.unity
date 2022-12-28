@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 480552120}
   - component: {fileID: 480552122}
   - component: {fileID: 480552123}
+  - component: {fileID: 480552124}
   m_Layer: 0
   m_Name: BlueButton
   m_TagString: Untagged
@@ -612,7 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c92738d1fb20974298b36d23d75cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
   Radius: 1
 --- !u!114 &480552123
 MonoBehaviour:
@@ -626,6 +626,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &480552124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480552117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d684564a397b44fa806255b29473fb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: Game_7a4ec67e-7a40-4543-9b3f-bce283d8a66b
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2125,7 @@ GameObject:
   - component: {fileID: 2026812899}
   - component: {fileID: 2026812901}
   - component: {fileID: 2026812902}
+  - component: {fileID: 2026812903}
   m_Layer: 0
   m_Name: RedButton
   m_TagString: Untagged
@@ -2196,7 +2210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c92738d1fb20974298b36d23d75cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
   Radius: 1
 --- !u!114 &2026812902
 MonoBehaviour:
@@ -2210,6 +2223,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1a16af13d990543bd3f57297f22359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2026812903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026812896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d684564a397b44fa806255b29473fb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: Game_f9dca643-621c-477e-9922-38281c09b69c
 --- !u!1 &2089512327
 GameObject:
   m_ObjectHideFlags: 0

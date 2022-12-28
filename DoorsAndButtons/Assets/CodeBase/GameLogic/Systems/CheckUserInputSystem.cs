@@ -17,10 +17,8 @@ namespace CodeBase.GameLogic.Systems
             this.inputService = inputService;
         }
 
-        public void Init(IEcsSystems systems)
-        {
+        public void Init(IEcsSystems systems) => 
             world = systems.GetWorld();
-        }
 
         public void Run(IEcsSystems systems)
         {

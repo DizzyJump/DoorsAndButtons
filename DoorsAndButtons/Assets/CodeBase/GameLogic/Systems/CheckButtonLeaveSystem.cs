@@ -2,8 +2,8 @@ using CodeBase.GameLogic.Components;
 using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 
-// System check are all entities with ability to interact are far enough
-// from button and mark that button deactivated by removing Activated component
+// System check are ALL entities with ability to interact are far enough
+// from activated button and mark that button as deactivated by removing Activated component
 namespace CodeBase.GameLogic.Systems
 {
     public class CheckButtonLeaveSystem : IEcsInitSystem, IEcsRunSystem
@@ -37,17 +37,19 @@ namespace CodeBase.GameLogic.Systems
                     var buttonPosition = positionPool.Get(button).Value;
                     var actorPosition = positionPool.Get(actor).Value;
                     var buttonRadius = radiusPool.Get(button).Value;
+                    
                     if (math.lengthsq(buttonPosition - actorPosition) <= (buttonRadius * buttonRadius))
                     {
                         nobodyInside = false;
                         break;
                     }
                 }
-                if(nobodyInside)
-                {
-                    activatedPool.Del(button);
-                }
+                if(nobodyInside) 
+                    DeactivateButton(button);
             } 
         }
+
+        private void DeactivateButton(int button) => 
+            activatedPool.Del(button);
     }
 }

@@ -32,17 +32,28 @@ namespace CodeBase.GameLogic.Systems
         {
             foreach(var request in requestsFilter)
             {
-                int targetID = requestsPool.Get(request).ButtonID;
+                string targetID = requestsPool.Get(request).ButtonID;
 
-                foreach (var button in buttonsFilter)
+                TryFindButtonByID(targetID, request);
+            }
+        }
+
+        private void TryFindButtonByID(string targetID, int request)
+        {
+            foreach (var button in buttonsFilter)
+            {
+                var buttonId = IdsPool.Get(button).Value;
+                if (buttonId == targetID)
                 {
-                    if(IdsPool.Get(button).Value == targetID)
-                    {
-                        ref var link = ref linksPool.Add(request);
-                        link.Value = world.PackEntity(button);
-                    }
+                    SetupLink(request, button);
                 }
             }
+        }
+
+        private void SetupLink(int request, int button)
+        {
+            ref var link = ref linksPool.Add(request);
+            link.Value = world.PackEntity(button);
         }
     }
 }

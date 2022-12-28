@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace CodeBase.UnityRelatedScripts
 {
+    [RequireComponent(typeof(UniqueId))]
     public class ButtonSceneSettingsView : MonoBehaviour
     {
-        public int ID;
+        public string ID => GetComponent<UniqueId>().Id;
         public Vector3 Position => transform.position;
         public float Radius;
         public ISceneObjectView View => gameObject.GetComponent<SceneObjectView>();

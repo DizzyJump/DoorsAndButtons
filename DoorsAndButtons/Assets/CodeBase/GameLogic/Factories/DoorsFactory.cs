@@ -13,7 +13,7 @@ namespace CodeBase.GameLogic.Factories
             return Create(world, config.OpenPosition, config.ClosedPosition, config.MovingSpeed, config.ButtonId, config.View);
         }
 
-        public static int Create(EcsWorld world, float3 openPosition, float3 closedPosition, float speed, int button, ISceneObjectView view)
+        public static int Create(EcsWorld world, float3 openPosition, float3 closedPosition, float speed, string buttonId, ISceneObjectView view)
         {
             var entity = world.NewEntity();
 
@@ -27,7 +27,7 @@ namespace CodeBase.GameLogic.Factories
             doorsPool.Add(entity);
 
             ref var buttonIdComponent = ref buttonPool.Add(entity);
-            buttonIdComponent.ButtonID = button;
+            buttonIdComponent.ButtonID = buttonId;
 
             ref var positionComponent = ref positionPool.Add(entity);
             positionComponent.Value = closedPosition;

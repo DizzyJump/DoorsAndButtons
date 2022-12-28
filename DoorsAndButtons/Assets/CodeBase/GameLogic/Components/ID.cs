@@ -5,6 +5,6 @@ namespace CodeBase.GameLogic.Components
 {
     public struct ID
     {
-        public int Value;
+        public string Value;
     }
 }

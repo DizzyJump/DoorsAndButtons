@@ -27,7 +27,7 @@ namespace CodeBase.GameLogic
             CreateLevelFromConfig(levelConfig);
         }
 
-        public void Update(float dt) => 
+        public void Update() => 
             systems?.Run();
 
         private void Initialize()

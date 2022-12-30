@@ -5,7 +5,7 @@ namespace CodeBase.GameLogic
     public interface IGameplayEngine
     {
         void InitializeLevel(LevelConfig levelConfig);
-        void Update(float dt);
+        void Update();
         void Cleanup();
     }
 }

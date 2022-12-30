@@ -33,7 +33,7 @@ namespace CodeBase.Infrastructure.States
         
         public void Tick()
         {
-            gameplayEngine.Update(Time.deltaTime);
+            gameplayEngine.Update();
         }
 
         public class Factory : PlaceholderFactory<IGameStateMachine, GameLoopState>

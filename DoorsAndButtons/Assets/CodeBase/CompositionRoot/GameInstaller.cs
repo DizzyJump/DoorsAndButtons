@@ -30,7 +30,7 @@ namespace CodeBase.CompositionRoot
             
             BindGameplayEngine();
             
-            BindSignals();
+            //BindSignals();
 
             BindGameStateMachine();
         }

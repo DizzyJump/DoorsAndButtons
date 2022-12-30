@@ -2,6 +2,7 @@
 using CodeBase.GameLogic.Configs;
 using CodeBase.UnityRelatedScripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace CodeBase.Infrastructure.States
@@ -44,18 +45,57 @@ namespace CodeBase.Infrastructure.States
             
             gameplayEngine.InitializeLevel(levelConfig);
             
+            gameplayEngine.Update(0); // run ecs systems to prewarm ecs world
+            
             gameStateMachine.Enter<GameLoopState>();
         }
 
         LevelConfig BuildLevelConfig()
         {
-            var doorsInScene = GameObject.FindObjectsOfType<DoorSceneSettingsView>();
-            var buttonsInScene = GameObject.FindObjectsOfType<ButtonSceneSettingsView>();
-            var players = GameObject.FindObjectsOfType<PlayerSceneSettingsView>();
-
             LevelConfig config = new LevelConfig();
 
-            // fill doors configs data
+            FillDoorsConfigData(config);
+            FillButtonsConfigData(config);
+            FillActorsConfigData(config);
+
+            return config;
+        }
+
+        private static void FillActorsConfigData(LevelConfig config)
+        {
+            var actorsSpawnPointsInScene = GameObject.FindObjectsOfType<PlayerSceneSettingsView>();
+            
+            foreach (var player in actorsSpawnPointsInScene)
+            {
+                LevelConfig.Actor workActor = new LevelConfig.Actor();
+                workActor.Position = player.Position;
+                workActor.MovementSpeed = player.MovementSpeed;
+                workActor.ListenInput = player.isListenInput;
+
+                config.Actors.Add(workActor);
+            }
+        }
+
+        private static void FillButtonsConfigData(LevelConfig config)
+        {
+            var buttonsInScene = GameObject.FindObjectsOfType<ButtonSceneSettingsView>();
+            
+            foreach (var button in buttonsInScene)
+            {
+                LevelConfig.ButtonConfig workButton = new LevelConfig.ButtonConfig();
+                workButton.ID = button.ID;
+                workButton.Position = button.Position;
+                workButton.Radius = button.Radius;
+                workButton.View = button.View;
+
+                config.Buttons.Add(workButton);
+            }
+        }
+
+        private static void FillDoorsConfigData(LevelConfig config)
+        {
+            var doorsInScene = GameObject.FindObjectsOfType<DoorSceneSettingsView>();
+            
             foreach (var door in doorsInScene)
             {
                 LevelConfig.DoorConfig workDoor = new LevelConfig.DoorConfig();
@@ -67,34 +107,8 @@ namespace CodeBase.Infrastructure.States
 
                 config.Doors.Add(workDoor);
             }
-
-            // fill buttons configs data
-            foreach (var button in buttonsInScene)
-            {
-                LevelConfig.ButtonConfig workButton = new LevelConfig.ButtonConfig();
-                workButton.ID = button.ID;
-                workButton.Position = button.Position;
-                workButton.Radius = button.Radius;
-                workButton.View = button.View;
-
-                config.Buttons.Add(workButton);
-            }
-
-            // fill actors config data. There are only player so far
-            foreach (var player in players)
-            {
-                LevelConfig.Actor workActor = new LevelConfig.Actor();
-                workActor.Position = player.Position;
-                workActor.MovementSpeed = player.MovementSpeed;
-                workActor.ListenInput = player.isListenInput;
-                workActor.View = player.View;
-
-                config.Actors.Add(workActor);
-            }
-
-            return config;
         }
-        
+
         public class Factory : PlaceholderFactory<IGameStateMachine, LoadLevelState>
         {
         }

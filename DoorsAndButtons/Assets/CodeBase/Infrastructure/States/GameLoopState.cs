@@ -25,6 +25,12 @@ namespace CodeBase.Infrastructure.States
             Debug.Log("Game loop state enter");
         }
 
+        public void OnFinishSession(bool isWin)
+        {
+            Debug.Log($"Level win: {isWin}");
+            gameStateMachine.Enter<LoadLevelState, string>(SceneNames.GameScene); // reload level due to we have only one in this game
+        }
+        
         public void Tick()
         {
             gameplayEngine.Update(Time.deltaTime);

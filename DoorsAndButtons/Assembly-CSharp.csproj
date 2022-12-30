@@ -170,6 +170,13 @@
      <Compile Include="Assets\CodeBase\GameLogic\IGameplayEngine.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\UniqueId.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\Helpers\EcsHelpers.cs" />
+     <Compile Include="Assets\CodeBase\UnityRelatedScripts\ViewFactories\PrefabPaths.cs" />
+     <Compile Include="Assets\CodeBase\UnityRelatedScripts\ViewFactories\GameplayViewsFactory.cs" />
+     <Compile Include="Assets\CodeBase\UnityRelatedScripts\ViewFactories\IGameplayViewsFactory.cs" />
+     <Compile Include="Assets\CodeBase\GameLogic\Systems\CreatePlayerSceneViewSystem.cs" />
+     <Compile Include="Assets\CodeBase\UnityRelatedScripts\DebugInstanciate.cs" />
+     <Compile Include="Assets\CodeBase\Signals\FinishLevelSignal.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\SceneNames.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

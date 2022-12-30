@@ -5,6 +5,5 @@
         public const string CoroutineRunnerPath = "Infrastructure/CoroutineRunner";
         public const string CurtainPath = "Infrastructure/CurtainCanvas";
         public const string GameBootstraper = "Infrastructure/Game Bootstraper";
-        public const string GameScene = "Game";
     }
 }

@@ -14,7 +14,7 @@ namespace CodeBase.Infrastructure.States
 
         public void Enter()
         {
-            gameStateMachine.Enter<LoadLevelState, string>(InfrastructureAssetPath.GameScene);
+            gameStateMachine.Enter<LoadLevelState, string>(SceneNames.GameScene);
         }
 
         public void Exit()

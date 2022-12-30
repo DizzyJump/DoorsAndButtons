@@ -48,6 +48,7 @@ namespace CodeBase.GameLogic
             BindSystem<UserInputRequestProcessingSystem>();
             BindSystem<CreateLevelFromConfigSystem>();
             BindSystem<CheckUserInputSystem>();
+            BindSystem<CreatePlayerSceneViewSystem>();
         }
 
         void BindSystem<TSystem>() where TSystem : IEcsSystem

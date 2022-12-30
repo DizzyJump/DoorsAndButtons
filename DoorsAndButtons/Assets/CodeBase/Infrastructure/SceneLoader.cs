@@ -32,7 +32,9 @@ namespace CodeBase.Infrastructure
 
             while (!waitNextScene.isDone)
                 yield return null;
-      
+            
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(nextScene));
+            
             onLoaded?.Invoke();
         }
     }

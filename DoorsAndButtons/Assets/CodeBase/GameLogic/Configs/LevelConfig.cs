@@ -28,7 +28,6 @@ namespace CodeBase.GameLogic.Configs
             public float3 Position;
             public float MovementSpeed;
             public bool ListenInput;
-            public ISceneObjectView View; // can be null
         }
 
         public List<DoorConfig> Doors;

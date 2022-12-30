@@ -13,11 +13,10 @@ namespace CodeBase.GameLogic.Factories
             return Create(world, 
                 actorConfig.Position,
                 actorConfig.MovementSpeed,
-                actorConfig.ListenInput, 
-                actorConfig.View);
+                actorConfig.ListenInput);
         }
 
-        public static int Create(EcsWorld world, float3 position, float speed, bool inputListener, ISceneObjectView view)
+        public static int Create(EcsWorld world, float3 position, float speed, bool inputListener)
         {
             var entity = world.NewEntity();
 
@@ -38,12 +37,6 @@ namespace CodeBase.GameLogic.Factories
 
             if(inputListener)
                 inputListenersPool.Add(entity);
-
-            if(view!=null)
-            {
-                ref var viewComponent = ref viewsPool.Add(entity);
-                viewComponent.Value = view;
-            }
 
             buttonInteractionPool.Add(entity);
 

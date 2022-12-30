@@ -3,6 +3,9 @@ using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.InputService;
 using CodeBase.Services.TimeService;
+using CodeBase.Signals;
+using CodeBase.UnityRelatedScripts;
+using CodeBase.UnityRelatedScripts.ViewFactories;
 using Zenject;
 
 namespace CodeBase.CompositionRoot
@@ -22,10 +25,28 @@ namespace CodeBase.CompositionRoot
             BindInputService();
 
             BindTimeService();
+
+            BindGameplayViewsFactory();
             
             BindGameplayEngine();
+            
+            BindSignals();
 
             BindGameStateMachine();
+        }
+
+        private void BindSignals()
+        {
+            Container.DeclareSignal<FinishLevelSignal>().MoveIntoAllSubContainers();
+        }
+
+        private void BindGameplayViewsFactory()
+        {
+            Container
+                .BindFactory<string, SceneObjectView, SceneObjectView.Factory>()
+                .FromFactory<PrefabResourceFactory<SceneObjectView>>();
+            
+            Container.BindInterfacesTo<GameplayViewsFactory>().AsSingle();
         }
 
         private void BindTimeService() => 
@@ -63,8 +84,14 @@ namespace CodeBase.CompositionRoot
         private void BindSceneLoader() => 
             Container.BindInterfacesAndSelfTo<SceneLoader>().AsSingle();
 
-        private void BindLoadingCurtain() => 
-            Container.Bind<ILoadingCurtain>().To<LoadingCurtain>().FromComponentInNewPrefabResource(InfrastructureAssetPath.CurtainPath).AsSingle();
+        private void BindLoadingCurtain()
+        {
+            Container
+                .Bind<ILoadingCurtain>()
+                .To<LoadingCurtain>()
+                .FromComponentInNewPrefabResource(InfrastructureAssetPath.CurtainPath)
+                .AsSingle();
+        }
 
         private void BindGameStateMachine()
         {

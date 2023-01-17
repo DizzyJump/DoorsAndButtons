@@ -101,6 +101,7 @@
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\System\Int.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Vector4.cs" />
      <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
+     <Compile Include="Assets\CodeBase\Editor\UniqueIdEditor.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Color.cs" />
      <Compile Include="Assets\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Inspectors\Unity\Bounds.cs" />
@@ -108,7 +109,6 @@
      <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
      <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
      <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
-     <Compile Include="Assets\CodeBase\Editor\UniqueIdEditor.cs" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\RunSystem.cs.txt" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\InitSystem.cs.txt" />
      <None Include="Assets\CodeBase\UnityRelatedScripts\LeoEcsEditor\Editor\Templates\Component.cs.txt" />

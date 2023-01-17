@@ -1,4 +1,6 @@
-﻿using CodeBase.GameLogic;
+﻿using System.Threading;
+using CodeBase.GameLogic;
+using CodeBase.Services.TimeService;
 using UnityEngine;
 using Zenject;
 
@@ -6,34 +8,36 @@ namespace CodeBase.Infrastructure.States
 {
     public class GameLoopState : IState, ITickable
     {
-        private IGameplayEngine gameplayEngine;
+        private IGameplayModeService gameplayModeService;
         private IGameStateMachine gameStateMachine;
+        private ITimeService timeService;
 
-        public GameLoopState(IGameStateMachine gameStateMachine, IGameplayEngine gameplayEngine)
+        public GameLoopState(IGameStateMachine gameStateMachine, IGameplayModeService gameplayModeService, ITimeService timeService)
         {
-            this.gameplayEngine = gameplayEngine;
+            this.gameplayModeService = gameplayModeService;
             this.gameStateMachine = gameStateMachine;
-        }
-        
-        public void Exit()
-        {
-            gameplayEngine.Cleanup();
+            this.timeService = timeService;
         }
 
         public void Enter()
         {
-            Debug.Log("Game loop state enter");
+            timeService.SetScale(1f);
         }
 
-        public void OnFinishSession(bool isWin)
-        {
-            Debug.Log($"Level win: {isWin}");
-            gameStateMachine.Enter<LoadLevelState, string>(SceneNames.GameScene); // reload level due to we have only one in this game
-        }
-        
+        public void Exit() => 
+            gameplayModeService.Cleanup();
+
         public void Tick()
         {
-            gameplayEngine.Update();
+            gameplayModeService.Tick();
+
+            CheckSessionEnd();
+        }
+
+        private void CheckSessionEnd()
+        {
+            if (gameplayModeService.IsSessionEnd)
+                gameStateMachine.Enter<FinishGameSessionState, GameplaySessionResult>(gameplayModeService.GetSessionResult());
         }
 
         public class Factory : PlaceholderFactory<IGameStateMachine, GameLoopState>

@@ -1,5 +1,7 @@
+using System;
 using UnityEditor.Animations;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.UnityRelatedScripts
 {
@@ -12,13 +14,11 @@ namespace CodeBase.UnityRelatedScripts
         Animator animator;
         Vector3 prevPosition;
 
-        // Start is called before the first frame update
         void Awake()
         {
             animator = GetComponent<Animator>();
         }
 
-        // Update is called once per frame
         void Update()
         {
             var currentPosition = transform.position;

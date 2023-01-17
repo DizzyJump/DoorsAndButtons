@@ -15,7 +15,7 @@ namespace CodeBase.UnityRelatedScripts.ViewFactories
 
         public ISceneObjectView CreatePlayer(float3 position)
         {
-            var view = viewFactory.Create(PrefabPaths.Player);
+            var view = viewFactory.Create(ViewsResPaths.Player);
             view.transform.position = position;
             SceneManager.MoveGameObjectToScene(view.gameObject, SceneManager.GetActiveScene());
             return view;

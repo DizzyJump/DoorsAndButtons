@@ -1,4 +1,5 @@
 ﻿using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Components.Requests;
 using CodeBase.GameLogic.Configs;
 using CodeBase.GameLogic.LeoEcs;
 

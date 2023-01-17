@@ -1,4 +1,9 @@
 using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Components.Actors;
+using CodeBase.GameLogic.Components.Buttons;
+using CodeBase.GameLogic.Components.Common;
+using CodeBase.GameLogic.Components.Input;
+using CodeBase.GameLogic.Components.Movement;
 using CodeBase.GameLogic.Configs;
 using CodeBase.GameLogic.Interfaces;
 using CodeBase.GameLogic.LeoEcs;
@@ -8,12 +13,12 @@ namespace CodeBase.GameLogic.Factories
 {
     public class ActorsFactory
     {
-        public static int Create(EcsWorld world, LevelConfig.Actor actorConfig)
+        public static int Create(EcsWorld world, LevelConfig.ActorConfig actorConfigConfig)
         {
             return Create(world, 
-                actorConfig.Position,
-                actorConfig.MovementSpeed,
-                actorConfig.ListenInput);
+                actorConfigConfig.Position,
+                actorConfigConfig.MovementSpeed,
+                actorConfigConfig.ListenInput);
         }
 
         public static int Create(EcsWorld world, float3 position, float speed, bool inputListener)

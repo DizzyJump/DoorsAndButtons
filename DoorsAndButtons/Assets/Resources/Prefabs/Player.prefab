@@ -674,6 +674,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleAnimation: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
   walkAnimation: {fileID: 9100000, guid: 75d3a58b3d7879f41926561701407a48, type: 2}
+  deathAnimation: {fileID: 9100000, guid: 441942176ee9a724b9afe936d1d03496, type: 2}
+  winAnimation: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810, type: 2}
 --- !u!114 &2205294392767548254
 MonoBehaviour:
   m_ObjectHideFlags: 0

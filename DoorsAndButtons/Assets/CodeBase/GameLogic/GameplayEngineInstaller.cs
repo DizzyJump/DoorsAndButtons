@@ -1,5 +1,11 @@
 using CodeBase.GameLogic.LeoEcs;
 using CodeBase.GameLogic.Systems;
+using CodeBase.GameLogic.Systems.ButtonsFeature;
+using CodeBase.GameLogic.Systems.DoorsFeature;
+using CodeBase.GameLogic.Systems.InputFeature;
+using CodeBase.GameLogic.Systems.Lifecycle;
+using CodeBase.GameLogic.Systems.MovementFeature;
+using CodeBase.GameLogic.Systems.ViewFeature;
 using CodeBase.UnityRelatedScripts.LeoEcsEditor.Runtime;
 using Zenject;
 
@@ -11,7 +17,7 @@ namespace CodeBase.GameLogic
         {
             BindEcsSystems();
         
-            Container.Bind<IGameplayEngine>().To<GameplayEngine>().AsSingle();
+            Container.BindInterfacesTo<GameplayModeService>().AsSingle();
         }
 
         private void BindEcsSystems()
@@ -23,7 +29,7 @@ namespace CodeBase.GameLogic
 #endif
         
 #if UNITY_EDITOR
-            BindDebugSystems();
+            //BindDebugSystems();
 #endif
         }
 
@@ -44,11 +50,13 @@ namespace CodeBase.GameLogic
             BindSystem<CheckButtonLeaveSystem>();
             BindSystem<FindButtonLinkByIdSystem>();
             BindSystem<UpdateDoorMovingByDoorStateSystem>();
-            BindSystem<UpdateDoorStateByButtonSystem>();
+            BindSystem<UpdateTriggerStateByButtonSystem>();
             BindSystem<UpdateMovingSystem>();
             BindSystem<UserInputRequestProcessingSystem>();
             BindSystem<CreateLevelFromConfigSystem>();
             BindSystem<CheckUserInputSystem>();
+            BindSystem<CheckLevelFailedTriggerSystem>();
+            BindSystem<CheckLevelSuccessTriggerSystem>();
         }
 
         void BindSystem<TSystem>() where TSystem : IEcsSystem

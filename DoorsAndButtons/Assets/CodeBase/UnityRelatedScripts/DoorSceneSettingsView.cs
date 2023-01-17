@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace CodeBase.UnityRelatedScripts
 {
+    [RequireComponent(typeof(UniqueId))]
     public class DoorSceneSettingsView : MonoBehaviour
     {
+        public string ID => GetComponent<UniqueId>().Id;
         public Vector3 ClosedPosition => transform.position;
         public Vector3 OpenPosition;
         public float MovingSpeed;

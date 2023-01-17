@@ -1,4 +1,7 @@
 using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Components.Buttons;
+using CodeBase.GameLogic.Components.Common;
+using CodeBase.GameLogic.Components.Movement;
 using CodeBase.GameLogic.Configs;
 using CodeBase.GameLogic.Interfaces;
 using CodeBase.GameLogic.LeoEcs;
@@ -18,9 +21,9 @@ namespace CodeBase.GameLogic.Factories
             var entity = world.NewEntity();
 
             var buttonsPool = world.GetPool<Button>();
-            var IdsPool = world.GetPool<ID>();
+            var IdsPool = world.GetPool<GUID>();
             var positionPool = world.GetPool<Position>();
-            var radiusPool = world.GetPool<Radius>();
+            var radiusPool = world.GetPool<Size>();
             var viewsPool = world.GetPool<View>();
 
             buttonsPool.Add(entity);

@@ -3,8 +3,8 @@ using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.InputService;
 using CodeBase.Services.TimeService;
-using CodeBase.Signals;
 using CodeBase.UnityRelatedScripts;
+using CodeBase.UnityRelatedScripts.UI;
 using CodeBase.UnityRelatedScripts.ViewFactories;
 using Zenject;
 
@@ -27,18 +27,16 @@ namespace CodeBase.CompositionRoot
             BindTimeService();
 
             BindGameplayViewsFactory();
-            
+
             BindGameplayEngine();
-            
-            //BindSignals();
 
             BindGameStateMachine();
+
+            InstallGameUI();
         }
 
-        private void BindSignals()
-        {
-            Container.DeclareSignal<FinishLevelSignal>().MoveIntoAllSubContainers();
-        }
+        private void InstallGameUI() => 
+            GameUiInstaller.Install(Container);
 
         private void BindGameplayViewsFactory()
         {
@@ -58,7 +56,7 @@ namespace CodeBase.CompositionRoot
         private void BindGameplayEngine()
         {
             Container
-                .Bind<IGameplayEngine>()
+                .Bind<IGameplayModeService>()
                 .FromSubContainerResolve()
                 .ByInstaller<GameplayEngineInstaller>()
                 .WithKernel()

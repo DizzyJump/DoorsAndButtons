@@ -1,4 +1,6 @@
-﻿using CodeBase.GameLogic;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using CodeBase.GameLogic;
 using CodeBase.GameLogic.Configs;
 using CodeBase.UnityRelatedScripts;
 using UnityEngine;
@@ -12,17 +14,17 @@ namespace CodeBase.Infrastructure.States
         private readonly IGameStateMachine gameStateMachine;
         private readonly ISceneLoader sceneLoader;
         private readonly ILoadingCurtain loadingCurtain;
-        private readonly IGameplayEngine gameplayEngine;
+        private readonly IGameplayModeService gameplayModeService;
 
         public LoadLevelState(IGameStateMachine gameStateMachine, 
             ISceneLoader sceneLoader, 
             ILoadingCurtain loadingCurtain, 
-            IGameplayEngine gameplayEngine)
+            IGameplayModeService gameplayModeService)
         {
             this.gameStateMachine = gameStateMachine;
             this.sceneLoader = sceneLoader;
             this.loadingCurtain = loadingCurtain;
-            this.gameplayEngine = gameplayEngine;
+            this.gameplayModeService = gameplayModeService;
         }
 
         public void Enter(string sceneName)
@@ -43,9 +45,9 @@ namespace CodeBase.Infrastructure.States
             // In real case level settings could be stored on server side or mocked for tests
             LevelConfig levelConfig = BuildLevelConfig();
             
-            gameplayEngine.InitializeLevel(levelConfig);
+            gameplayModeService.InitializeGameplaySession(levelConfig);
             
-            gameplayEngine.Update(0); // run ecs systems to prewarm ecs world
+            gameplayModeService.Tick(); // run ecs systems once to prewarm ecs world
             
             gameStateMachine.Enter<GameLoopState>();
         }
@@ -57,8 +59,24 @@ namespace CodeBase.Infrastructure.States
             FillDoorsConfigData(config);
             FillButtonsConfigData(config);
             FillActorsConfigData(config);
+            FillButtonTriggerConfigData(config);
 
             return config;
+        }
+
+        private void FillButtonTriggerConfigData(LevelConfig config)
+        {
+            var buttonTriggersInScene = GameObject.FindObjectsOfType<ButtonTriggerSceneSettingsView>();
+
+            foreach (var trigger in buttonTriggersInScene)
+            {
+                LevelConfig.ButtonTriggerConfig workTriggerConfig = new LevelConfig.ButtonTriggerConfig();
+                
+                workTriggerConfig.ButtonID = trigger.TriggerButton.ID;
+                workTriggerConfig.ActionType = trigger.Action;
+                
+                config.ButtonTriggers.Add(workTriggerConfig);
+            }
         }
 
         private static void FillActorsConfigData(LevelConfig config)
@@ -67,12 +85,13 @@ namespace CodeBase.Infrastructure.States
             
             foreach (var player in actorsSpawnPointsInScene)
             {
-                LevelConfig.Actor workActor = new LevelConfig.Actor();
-                workActor.Position = player.Position;
-                workActor.MovementSpeed = player.MovementSpeed;
-                workActor.ListenInput = player.isListenInput;
+                LevelConfig.ActorConfig workActorConfig = new LevelConfig.ActorConfig();
+                
+                workActorConfig.Position = player.Position;
+                workActorConfig.MovementSpeed = player.MovementSpeed;
+                workActorConfig.ListenInput = player.isListenInput;
 
-                config.Actors.Add(workActor);
+                config.Actors.Add(workActorConfig);
             }
         }
 
@@ -83,6 +102,7 @@ namespace CodeBase.Infrastructure.States
             foreach (var button in buttonsInScene)
             {
                 LevelConfig.ButtonConfig workButton = new LevelConfig.ButtonConfig();
+                
                 workButton.ID = button.ID;
                 workButton.Position = button.Position;
                 workButton.Radius = button.Radius;
@@ -99,6 +119,8 @@ namespace CodeBase.Infrastructure.States
             foreach (var door in doorsInScene)
             {
                 LevelConfig.DoorConfig workDoor = new LevelConfig.DoorConfig();
+
+                workDoor.ID = door.ID;
                 workDoor.OpenPosition = door.OpenPosition;
                 workDoor.ClosedPosition = door.ClosedPosition;
                 workDoor.MovingSpeed = door.MovingSpeed;

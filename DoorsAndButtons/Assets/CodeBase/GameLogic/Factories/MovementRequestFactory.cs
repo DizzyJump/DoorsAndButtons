@@ -1,4 +1,5 @@
 ﻿using CodeBase.GameLogic.Components;
+using CodeBase.GameLogic.Components.Input;
 using CodeBase.GameLogic.LeoEcs;
 using Unity.Mathematics;
 

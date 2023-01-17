@@ -1,13 +1,8 @@
 # DoorsAndButtons
 
-1. Часов потрачено 11
-2. Системы который должны быть запущены на сервере:<br>
-  2.1. CheckButtonEnterSystem<br>
-  2.2. CheckButtonLeaveSystem<br>
-  2.3. FindButtonLinkByIdSystem<br>
-  2.4. UpdateDoorMovingByDoorStateSystem<br>
-  2.5. UpdateDoorStateByButtonSystem<br>
-  2.6. UpdateMovingSystem<br>
-  2.7. UserInputRequestProcessingSystem<br>
-  
- Для вашего удобства я собрал консольную тестовую версию "сервера" без Unity. Посмотреть можно тут: https://github.com/DizzyJump/DoorsAndButtonsNoUnity
+Демонстрационный проект на котором я отрабатываю различные идеи связанные с архитектурой и дизайном кода.
+
+В данном проекте я попытался объединить сервисную архитектуру управляющую жизненным циклом игры с ECS подходом к реализации геймплейной логики.
+Проект реализован в обвязке из DI фреймворка Zenject.
+
+Интересной особенностью проекта является то, что геймплейная логика не только реализована ECS-way, но так же реализована полностью отвязанной от движка Unity таким образом, что бы была возможность без проблем вынести её на сервер где нет Unity

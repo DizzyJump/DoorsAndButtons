@@ -10,7 +10,7 @@ namespace CodeBase.UnityRelatedScripts.UI
         public UIFactory(FinishLevelOverlay.Factory finishLevelOverlayFactory) => 
             this.finishLevelOverlayFactory = finishLevelOverlayFactory;
 
-        public IOverlay CreateFinishLevelOverlay(string msg) => 
+        public Overlay CreateFinishLevelOverlay(string msg) => 
             finishLevelOverlayFactory.Create(msg);
     }
 }

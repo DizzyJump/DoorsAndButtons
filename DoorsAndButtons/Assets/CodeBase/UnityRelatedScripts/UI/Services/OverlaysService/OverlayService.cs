@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using UnityEngine;
 
 namespace CodeBase.UnityRelatedScripts.UI.Overlays.OverlaysService
 {
@@ -12,14 +13,14 @@ namespace CodeBase.UnityRelatedScripts.UI.Overlays.OverlaysService
 
         public async Task ShowFinishLevelOverlay(string message)
         {
-            IOverlay overlay = uiFactory.CreateFinishLevelOverlay(message);
+            Overlay overlay = uiFactory.CreateFinishLevelOverlay(message);
             await ProcessOverlay(overlay);
         }
 
-        private async Task ProcessOverlay(IOverlay overlay)
+        private async Task ProcessOverlay(Overlay overlay)
         {
             await overlay.Show();
-            overlay.Destroy();
+            GameObject.Destroy(overlay.gameObject);
         }
     }
 }

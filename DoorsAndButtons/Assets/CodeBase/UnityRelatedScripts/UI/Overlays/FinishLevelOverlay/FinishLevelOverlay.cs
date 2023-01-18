@@ -7,7 +7,7 @@ using Zenject;
 
 namespace CodeBase.UnityRelatedScripts.UI.Overlays.FinishLevelOverlay
 {
-    public class FinishLevelOverlay : MonoBehaviour, IOverlay
+    public class FinishLevelOverlay : Overlay
     {
         [SerializeField] private Button closeButton;
         [SerializeField] private TextMeshProUGUI messageLabel;
@@ -19,16 +19,11 @@ namespace CodeBase.UnityRelatedScripts.UI.Overlays.FinishLevelOverlay
         {
             message = msg;
         }
-        
-        public async Task Show()
+
+        public override async Task Show()
         {
             messageLabel.text = message;
             await closeButton;
-        }
-
-        public void Destroy()
-        {
-            Destroy(gameObject);
         }
 
         public class Factory : PlaceholderFactory<string, FinishLevelOverlay>

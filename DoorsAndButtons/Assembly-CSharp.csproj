@@ -60,7 +60,6 @@
      <Compile Include="Assets\CodeBase\GameLogic\Systems\ViewFeature\UpdateViewPositionSystem.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\LeoEcs\filters.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameBootstrapper.cs" />
-     <Compile Include="Assets\CodeBase\UnityRelatedScripts\UI\Overlays\IOverlay.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ILoadingCurtain.cs" />
      <Compile Include="Assets\CodeBase\UnityRelatedScripts\UI\Factories\UIFactoriesInstaller.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
@@ -200,6 +199,7 @@
      <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
      <Compile Include="Assets\CodeBase\GameLogic\Components\Actors\Actor.cs" />
      <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+     <Compile Include="Assets\CodeBase\UnityRelatedScripts\UI\Overlays\Overlay.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
